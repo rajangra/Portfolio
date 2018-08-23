@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Contact | Rajan Jangra</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="6ef60580-6fd5-4a15-9a2c-9809d43c8804";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+
+    <!--    <script>
+              function _(id){ return document.getElementById(id); }
+              function submitForm(){
+              	_("mybtn").disabled = true;
+              	_("status").innerHTML = 'please wait ...';
+              	var formdata = new FormData();
+              	formdata.append( "n", _("n").value );
+              	formdata.append( "e", _("e").value );
+              	formdata.append( "m", _("m").value );
+              	var ajax = new XMLHttpRequest();
+              	ajax.open( "POST", "process.php" );
+              	ajax.onreadystatechange = function() {
+              		if(ajax.readyState == 4 && ajax.status == 200) {
+              			if(ajax.responseText == "success"){
+              				_("contact-form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+              			} else {
+              				_("status").innerHTML = ajax.responseText;
+              				_("mybtn").disabled = false;
+              			}
+              		}
+              	}
+              	ajax.send( formdata );
+              }
+              </script>
+
+            -->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+              <div class="navbar navbar-default navbar-fixed-top">
+                    <div class="">
+                      <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand brandlogo"><span class=""></span></a>
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                      <div class="navbar-collapse collapse" id="navbar-main">
+                        <ul class="nav navbar-nav">
+                        <!--  <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="something">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="something here">
+                              <li><a href="../default/">Default</a></li>
+                            </ul>
+                          </li> -->
+                          <li>
+                            <a id="work1">projects</a>
+                          </li>
+                          <li>
+                            <a href="about.html">about</a>
+                          </li>
+                          <li>
+                            <a href="https://drive.google.com/open?id=1SII1yOKzRiK9Pg25d5e4Hu0XZvIiZfHr" target="_blank">resume</a>
+                          </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="mailto:rajanixd@gmail.com" class="fa fa-envelope-o" target="_blank"></a></li>
+                          <li><a href="https://www.linkedin.com/in/rajanjangra/" class="fa fa-linkedin" target="_blank"></a></li>
+                            <li><a href="https://dribbble.com/rajangra" class="fa fa-dribbble" target="_blank"></a></li>
+                              <li><a href="https://medium.com/@rajangra" class="fa fa-medium" target="_blank"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+    </head>
+    <body>
+<!-- Top section -->
+<div class="container">
+  <div class="row">
+<div class="col-lg-6">
+<h4 class="opacity-30 ">💬 Message </h4>
+<h3 class="">rajanixd@gmail.com</h3>
+  </div>
+  <div class="col-lg-6">
+      <h4 class="opacity-30 ">🤙 Call </h4>
+  <h3 class="opacity-30">647.919.7392</h3>
+  </div>
+  </div>
+</div>
+
+
+
+<!-- 3. Instantiate clipboard -->
+<script>
+var clipboard = new Clipboard('.btn');
+
+clipboard.on('success', function(e) {
+  $('#copybutton').text('Copied!');
+        console.log(e);
+
+});
+
+clipboard.on('error', function(e) {
+    console.log(e);
+
+});
+</script>
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <form id="contact-form" onsubmit="submitForm(); return false;">
+
+        <label for="name" class="main-font-used">Name</label>
+        <input type="text" id="n" name="name" placeholder="Rajan" required>
+
+        <label for="email" class="main-font-used">Email</label>
+        <input type="email" id="e" placeholder="rajanixd@gmail.com" required>
+
+        <label for="message" class="main-font-used">Message</label>
+        <textarea type="text" id="m" name="message" placeholder="Please write your message here :)" required style="height:200px"></textarea>
+        <input id="mybtn" class="submit smoothly" type="submit" value="Send"> <span id="status"></span>
+      </form>
+  </div>
+</div>
+</div>
+
+-->
+
+<!-- Footer section -->
+          <div class="container less-top-padding-footer bottom-padding-footer ">
+            <div class="row">
+        <div class="col-md-12 align-center footer-section" id="">
+ <span class="fa fa-heart red-heart bigheart pulse" data-toggle="tooltip" data-placement="top" title="Made with love by Rajan"> </span>
+          </div>
+          </div>
+          </div>
+
+          <!-- Footer end -->
+
+                  <!-- Scripts and stuff-->
+
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-109064768-1','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
