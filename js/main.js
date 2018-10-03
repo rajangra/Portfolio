@@ -1,6 +1,6 @@
 $(function () {
   count = 0;
-  wordsArray = [" who cares."," focused on solving real problems."," who gets sh*t done."];
+  wordsArray = [" who cares."," loves good design."," who gets sh*t done."];
   setInterval(function () {
     count++;
     $("#word").fadeOut(400, function () {
