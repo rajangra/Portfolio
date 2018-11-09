@@ -8,7 +8,7 @@ Base styles: opinionated defaults
 html {
   color: #222;
   font-size: 1em;
-  line-height: 1.4;
+
 }
 
 /*
@@ -287,6 +287,8 @@ http://www.phpied.com/delay-loading-your-print-css/
 body{
 
   padding-top: 150px;
+  line-height: 1.618em !important;
+
 }
 
 h2{
@@ -1027,6 +1029,10 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
   .container-smaller {
     width: 70%;
   }
+  .section-margins-overview{
+
+    margin: 3em auto;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1285,10 +1291,7 @@ color: #FFFFFF;
   margin-bottom: 25px;
 }
 
-.section-margins-overview{
 
-  margin: 3em auto;
-}
 
 .section-title{
     color: #e87815;
@@ -1312,3 +1315,8 @@ height: 100px;
 opacity: 0.75;
 margin: 0 auto;
 }
+
+/*.col-md-8  {
+  margin: 0 auto !important;
+float: none !important;
+}*/
