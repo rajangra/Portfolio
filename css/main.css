@@ -1219,11 +1219,11 @@ a{  color: #151515; }
 
 .owl-nav { text-align: center;}
 
-.sec-skills li { display: inline-block; margin: 0.5rem; background-color: #feff9c;
+.sec-skills li { display: inline-block; margin: 0.5rem; background-color: #f9f9f9;
     padding: 0.5rem;     box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
 
 
-.container-book{ background-color: #F1F1F1;
+.container-book{ background-color: #f9f9f9;
     padding: 10px 25px;}
 
 .container-book:hover {transform: scale(1.03); transition: .5s ease;
