@@ -937,12 +937,9 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
 
 .scaleimage:hover{
 
-  transform: scale(0.99);
-  -webkit-transition: all 150ms ease;
-  -moz-transition: all 150ms ease;
-  -ms-transition: all 150ms ease;
-  -o-transition: all 150ms ease;
-  transition: all 150ms ease;
+  transform: scale(1.1, 1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 30px 60px;
+
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
@@ -1100,7 +1097,12 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
 background: linear-gradient(rgba(255,51,102,.5),rgba(51,204,255,.5)),url("https://res.cloudinary.com/rajangra/image/upload/v1536590451/wishme-cover_qgugh2.jpg") center center;
 background-size: cover;
 height: 400px;
+}
 
+.sizedimage-sunlife{
+background: url("https://res.cloudinary.com/rajangra/image/upload/v1551535951/1_tipMll5MB3i1-gyzhjGFBQ_iqcojf.png") top center;
+background-size: cover;
+height: 700px;
 }
 
 .full-width-image{
@@ -1188,6 +1190,7 @@ padding: 0;
   height: 250px;
 width: 100%;
 object-fit: cover;
+transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
 
 
 }
@@ -1225,11 +1228,15 @@ a{  color: #151515; }
 .owl-nav { text-align: center;}
 
 .sec-skills li { display: inline-block; margin: 0.5rem; background-color: #f9f9f9;
-    padding: 0.5rem;     box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+    padding: 0.5rem;     box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+    border-radius: 4px;
+  }
 
 
 .container-book{ background-color: #f9f9f9;
-    padding: 10px 25px;}
+    padding: 10px 25px;
+      border-radius: 4px;
+    }
 
 .container-book:hover {transform: scale(1.03); transition: .5s ease;
   box-shadow: 0 2px 6px rgba(88, 88, 88, 0.5);}
