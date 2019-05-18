@@ -1267,6 +1267,21 @@ line-height: 1.2;
 
 }
 
+.link-name{
+  color: #3c3fff;
+}
+
+
+
+/*---------------------------------------------------- */
+/*Media queries*/
+
+
+
+
+
+
+
   @media screen and (max-width: 450px) {
     .massiveheading {
       font-size: 1.7em;
