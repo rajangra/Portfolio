@@ -24,7 +24,7 @@ $('#work, #work1').click(function(){
         var $navbar = $(".navbar-collapse");
         var _opened = $navbar.hasClass("in");
         if (_opened === true && !clickover.hasClass("navbar-toggle")) {
-            $navbar.collapse('hide');
+            $navbar.collapse('toggle');
         }
     });
 
