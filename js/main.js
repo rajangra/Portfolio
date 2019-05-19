@@ -28,7 +28,6 @@ $('#work, #work1').click(function(){
         }
     });
 
-
  });
 
  $('.owl-carousel').owlCarousel({

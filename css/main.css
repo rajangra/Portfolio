@@ -1254,6 +1254,17 @@ margin: 0 auto;
   border-radius: 0.25em;
 }
 
+.sec-testimonial{
+background-color: #ebf4ff;
+margin: 4em auto;
+}
+
+.sec-testimonial .row {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+}
+
 
 .sec-testimonial p{
 margin-top: 2em;
@@ -1317,6 +1328,10 @@ line-height: 1.2;
       }
         h3 {
           font-size: 2em;
+        }
+
+        .sec-testimonial .row {
+          padding-bottom: 2em;
         }
 
   }
