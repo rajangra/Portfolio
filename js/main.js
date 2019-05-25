@@ -10,7 +10,7 @@ $(function () {
 });
 
 $('#work, #work1').click(function(){
-    $("html, body").animate({ scrollTop: 400 }, 500);
+    $("html, body").animate({ scrollTop: 700 }, 500);
     return false;
  });
 
