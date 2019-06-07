@@ -330,6 +330,7 @@ h6{
   margin-top: 14px;
   margin-left: 15px;
 }
+
 /*
 .brandlogo:hover{
 
@@ -351,6 +352,7 @@ h1{
   color: #090535;
   font-weight: bold;
   font-size: 2em;
+  margin: 0.3em 0;
 
 }
 
@@ -377,6 +379,7 @@ h3{
 .mb-5 {margin-bottom: 2em;}
 .mb-3 {margin-bottom: 1em;}
 .p-5 {padding: 2em 0em;}
+.d-flex { display: flex;}
 
 .slightlybiggerh3{
 
@@ -945,7 +948,7 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
 
 .listofparagraphs{
 
-  margin-bottom: 20px;
+  margin-bottom: 1em;
 
 }
 
@@ -1273,7 +1276,7 @@ line-height: 1.2;
 }
 
 .sec-testimonial h4{
-  color: #577592;
+  color: #5775  92;
   font-size: 16px;
 
 }
@@ -1289,21 +1292,25 @@ line-height: 1.2;
 }
 
 
+.about-photo img{
+  height: 250px;
+  margin: 0 0 1em 0;
+}
+
+.thumbnail-about-photo{
+  height: 100px;
+}
+
+
 /*---------------------------------------------------- */
 /*Media queries*/
-
-
-
-
-
-
 
   @media screen and (max-width: 450px) {
     .massiveheading {
       font-size: 1.7em;
     }
     body {
-      font-size: 16px;
+      font-size: 18px;
     }
     h1 {
       font-size: 1.2em;
@@ -1318,10 +1325,10 @@ line-height: 1.2;
       font-size: 23px;
     }
     li, p {
-      font-size: 16px;
+      font-size: 18px;
     }
     .h1-title{
-      font-size: 2.5em;
+      font-size: 2em;
     }
 
     .lightbiggerh2 {
@@ -1329,10 +1336,10 @@ line-height: 1.2;
       }
 
       .massiveheadingindex{
-        font-size: 3em;
+        font-size: 2em;
       }
         h3 {
-          font-size: 2em;
+          font-size: 1.5em;
         }
 
         .sec-testimonial .row {
