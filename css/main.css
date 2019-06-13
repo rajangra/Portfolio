@@ -348,7 +348,6 @@ h6{
 
 h1{
 
-  color: #19135a;
   font-weight: bold;
   font-size: 2em;
   margin: 0.3em 0;
@@ -1060,6 +1059,7 @@ body {
   text-rendering: optimizelegibility;
   font-family: 'Karla', sans-serif;
   font-size: 20px;
+  color: #090535;
 }
 
 .biggersizedh2{
