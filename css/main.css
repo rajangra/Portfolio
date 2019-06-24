@@ -287,7 +287,7 @@ http://www.phpied.com/delay-loading-your-print-css/
 body{
 
   padding-top: 150px;
-  line-height: 1.8em !important;
+  line-height: 1.5em !important;
 }
 
 h2{
@@ -378,6 +378,7 @@ h3{
 .mb-3 {margin-bottom: 1em;}
 .p-5 {padding: 2em 0em;}
 .d-flex { display: flex;}
+.d-content-center { display: flex; justify-content: center;}
 
 .slightlybiggerh3{
 
@@ -946,7 +947,7 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
 
 .listofparagraphs{
 
-  margin-bottom: 1em;
+  margin-bottom: 0.7em;
 
 }
 
@@ -1349,6 +1350,10 @@ line-height: 1.2;
         margin-top: 4em;
 
         }
+
+.sizedimage-sunlife{
+  display: none;
+}
 
   }
 
