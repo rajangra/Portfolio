@@ -1299,6 +1299,10 @@ line-height: 1.2;
   height: 100px;
 }
 
+.about-content{
+  display: flex;
+  justify-content: center;
+}
 
 /*---------------------------------------------------- */
 /*Media queries*/
