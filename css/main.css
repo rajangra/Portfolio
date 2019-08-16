@@ -1184,7 +1184,7 @@ a{  color: #151515; }
 .owl-nav { text-align: center;}
 
 .sec-skills li { display: inline-block; margin: 0.5rem; background-color: #f9f9f9;
-    padding: 0.5rem;     box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+    padding: 0.5rem;
     border-radius: 4px;
   }
 
@@ -1213,12 +1213,12 @@ color: inherit;
   }
 
 .post-category {
-background-color: rgb(238, 238, 238);
+background-color: #f9f9f9;
 font-size: 16px;
 padding: 0.3em;
 position: relative;
 color: #090535;
-border-radius: 5px;
+border-radius: 4px;
 margin-right:5px;
 
 }
