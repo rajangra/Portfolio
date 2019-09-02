@@ -336,6 +336,7 @@ h4{
   color: #151515;
   font-size: 1em;
   font-weight: bold;
+  margin-top: 2em;
 }
 
 h5{
@@ -1312,6 +1313,8 @@ line-height: 1.2;
 .sec-testimonial h4{
   color: #5775  92;
   font-size: 16px;
+  font-weight: normal;
+  margin-top: 1.5em;
 
 }
 
