@@ -326,7 +326,7 @@ body{
 
 h2{
 
-  font-size: 25px;
+  font-size: 40px;
 
 }
 
@@ -385,7 +385,7 @@ h1{
 
   font-weight: bold;
   font-size: 2em;
-  margin: 0.3em 0;
+  margin: 0.5em 0;
 
 }
 
@@ -401,7 +401,7 @@ p{
 
 
 h3{
-  font-size: 1.7em;
+  font-size: 24px;
 }
 
 
@@ -919,8 +919,10 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
 .boldh1{
   font-weight: bold;
 }
-
-.h1-title { font-size: 4em;}
+/*desktop*/
+.h1-title { font-size: 4em; margin-bottom: 0px; margin-top: 16px;}
+.h2-title {margin-top: 8px;}
+.h3-title {margin-top: 32px;}
 
 .lightfont{
 
@@ -1354,6 +1356,14 @@ line-height: 1.2;
     }
     h1 {
       font-size: 1.2em;
+    }
+    h2{
+      font-size: 24px;
+    }
+    /*mobile*/
+    .h3-title{
+      margin-top: 24px;
+      font-size: 18px;
     }
     .cta-text {
       font-size: 40px;
