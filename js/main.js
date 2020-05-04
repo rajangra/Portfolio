@@ -29,7 +29,7 @@
 
 
     $('#work, #work1').click(function(){
-        $("html, body").animate({ scrollTop: 700 }, 500);
+        $("html, body").animate({ scrollTop: 600 }, 500);
         return false;
      });
 
@@ -57,16 +57,29 @@
 
 
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+    $(document).scroll(function() {
+      var y = $(this).scrollTop();
+      if (y < 150) {
+        $('#navbar').fadeIn();
       } else {
-        document.getElementById("navbar").style.top = "-75px";
+        $('#navbar').fadeOut();
       }
-      prevScrollpos = currentScrollPos;
-    }
+    });
+
+// Alternative W3school method
+
+    // var prevScrollpos = window.pageYOffset;
+    // window.onscroll = function() {
+    //   var currentScrollPos = window.pageYOffset;
+    //   if (prevScrollpos > currentScrollPos) {
+    //     document.getElementById("navbar").style.top = "0";
+    //   } else {
+    //     document.getElementById("navbar").style.top = "-75px";
+    //   }
+    //   prevScrollpos = currentScrollPos;
+    // }
+
+
 
 
 });
