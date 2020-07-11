@@ -6,7 +6,7 @@ Base styles: opinionated defaults
 
 
 html {
-  color: #222;
+  color: #111;
   font-size: 1em;
 
 }
@@ -683,7 +683,7 @@ a:hover, a:focus{
 
 .white-text{
 
-  color: #222;
+  color: #111;
 }
 
 .cta-area{
@@ -1113,7 +1113,7 @@ body {
   text-rendering: optimizelegibility;
   font-family: 'Karla', sans-serif;
   font-size: 18px;
-  color: #222;
+  color: #111;
 }
 
 .biggersizedh2{
@@ -1215,7 +1215,7 @@ margin-top: 3.5em;
   box-shadow: 0 2px 6px rgba(88, 88, 88, 0.5);}
 
 
-  li, p { color: #222;}
+  li, p { color: #111;}
 
   .tipped { border-bottom: 1px dashed;
     color: inherit;
@@ -1231,7 +1231,7 @@ margin-top: 3.5em;
     font-size: .9em;
     padding: 0.3em 0.7em;
     position: relative;
-    color: #222;
+    color: #111;
     border-radius: 4px;
     margin-right:5px;
     display: inline-flex;
@@ -1324,7 +1324,7 @@ margin-top: 3.5em;
   }
 
   .sec-testimonial i {
-    color: #222;
+    color: #111;
 
   }
 
@@ -1333,7 +1333,7 @@ margin-top: 3.5em;
     /*text-transform: uppercase;*/
     font-weight: 600;
     /*margin-top: -.5em;*/
-    letter-spacing: 0.5px;
+    /*letter-spacing: 0.5px;*/
     color: #666;
 
   }
@@ -1350,10 +1350,12 @@ margin-top: 3.5em;
   font-family: 'Spectral', serif;
 }
 
-
+.link-title {
+  color: #111;
+}
 
   .link-name{
-    color: #3c3fff;
+    color: #111;
   }
 
 
