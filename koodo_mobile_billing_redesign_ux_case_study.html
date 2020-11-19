@@ -1,293 +1,365 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Koodo Billing Redesign | Rajan Jangra</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Koodo Billing | Rajan Jangra</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- fancybox -->
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <!-- fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
-<!-- main css -->
-<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="6ef60580-6fd5-4a15-9a2c-9809d43c8804";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
 
-
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="theme-color" content="#ffffff">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/main.css">
 
 
-              <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-                    <div class="">
-                      <div class="navbar-header">
-                        <a href="index.html" class="navbar-brand brandlogo"><span class=""></span></a>
-                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                      </div>
-                      <div class="navbar-collapse collapse" id="navbar-main">
-                        <ul class="nav navbar-nav">
-                        <!--  <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="something">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu" aria-labelledby="something here">
-                              <li><a href="../default/">Default</a></li>
-                            </ul>
-                          </li> -->
-                          <li>
-                            <a href="index.html">projects</a>
-                          </li>
-                          <li>
-                            <a href="about.html">about</a>
-                          </li>
-                          <li>
-                            <a href="https://drive.google.com/open?id=1SII1yOKzRiK9Pg25d5e4Hu0XZvIiZfHr" target="_blank">resume</a>
-                          </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                          <li><a href="mailto:rajanixd@gmail.com" class="fa fa-envelope-o" target="_blank"></a></li>
-                          <li><a href="https://www.linkedin.com/in/rajanjangra/" class="fa fa-linkedin" target="_blank"></a></li>
-                            <li><a href="https://dribbble.com/rajangra" class="fa fa-dribbble" target="_blank"></a></li>
-                              <li><a href="https://medium.com/@rajangra" class="fa fa-medium" target="_blank"></a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-    </head>
-    <body>
-<!-- Top section -->
-<div class="container ">
-  <div class="row">
-<div class="col-lg-12">
-  <h1 class="">Koodo's bill experience</h1>
-<p class="mb-5">Billing made simpler through communication and clarity.</p>
-  </div>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="">
+      <div class="navbar-header">
+        <a href="index.html" class="navbar-brand brandlogo"><span class=""></span></a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <!--  <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="something">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" aria-labelledby="something here">
+          <li><a href="../default/">Default</a></li>
+        </ul>
+      </li> -->
+      <li>
+        <a href="index.html">projects</a>
+      </li>
+      <li>
+        <a href="about.html">about</a>
+      </li>
+      <li>
+        <a href="https://drive.google.com/open?id=1SII1yOKzRiK9Pg25d5e4Hu0XZvIiZfHr" target="_blank">resume</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="mailto:rajanixd@gmail.com" class="fa fa-envelope-o" target="_blank"></a></li>
+      <li><a href="https://www.linkedin.com/in/rajanjangra/" class="fa fa-linkedin" target="_blank"></a></li>
+      <li><a href="https://dribbble.com/rajangra" class="fa fa-dribbble" target="_blank"></a></li>
+      <li><a href="https://medium.com/@rajangra" class="fa fa-medium" target="_blank"></a></li>
+    </ul>
   </div>
 </div>
-<!-- Image -->
-<div class="container-fluid listofparagraphs">
-  <div class="row sizedimage-sunlife">
-<!-- <h6 class="listofparagraphs align-center"> </h6> -->
-  </div>
 </div>
+</head>
+<body>
 
+  <!-- Image -->
+  <div class="container listofparagraphs">
+    <div class="row sizedimage-koodo mb-5 mt-4">
+    </div>
+  </div>
 
-<!-- context / tools used / company info -->
+  <!-- title section -->
   <div class="container">
-<div class="row section-margins-overview">
-<div class="col-md-2 listofparagraphs"><span><strong>Sun Life Financial</strong></span><br> <span>Product Design</span></div>
-<div class="col-md-4 listofparagraphs"><span><strong>Client:</strong><span> Design Team at Sun Life</span></span> <br>
-<span><strong>Timeline:</strong><span> Oct 18 - Mar 19</span></span> <br>
-<span><strong>Tools:</strong><span> <a href="https://sketchapp.com/" target="_blank">Sketch</a> &amp; <a href="https://www.invisionapp.com/design-system-manager/" target="_blank">Design System Manager by InVision</a></span></span>
-</div>
-<div class="col-md-6 listofparagraphs"><span><strong>Overview: </strong>We needed a better way to communicate design. Allowing everyone to be consistent, faster, have less meetings, and finally - help scale. I built the Lumen Design System @ Sun Life Financial.</span></div>
-</div>
-</div>
-<!-- end of context -->
-
-<div class="container">
-  <div class="row challenge-section p-5 mb-5">
-<div class="col-md-12">
-<h6 class="section-title text-center mb-5">CHALLENGE</h6>
-<p class="text-center mb-3 challenge-body">Decrease design &amp; development debt within the organization by introducing a better process</p>
-</div>
+    <div class="row d-content-center">
+      <div class="col-md-8">
+        <h1 class="">Koodo Billing</h1>
+      </div>
+    </div>
   </div>
 
 
-
-<div class="row">
-  <div class="col-md-6 ">
-  <h4 class="listofparagraphs">Goals &amp; success metrics</h4>
-<li  class="listofparagraphs">Improved on-boarding process for new designers</li>
-<li  class="listofparagraphs">Starting a project becomes easier</li>
-<li  class="listofparagraphs">Improving speed for creating new work</li>
-<li  class="listofparagraphs">Decreased amount of meetings for pattern reviews</li>
-</div>
-
-<div class="col-md-6 listofparagraphs">
-<h4 class="listofparagraphs">My Responsibilities</h4>
-<li  class="listofparagraphs">Analyze current design process</li>
-<li class="listofparagraphs">Create living &amp; breathable components</li>
-<li class="listofparagraphs">Develop design system documentation</li>
-<li class="listofparagraphs">Mentor designers on using the design system</li>
-<li class="listofparagraphs">Manage iterations and create improvements</li>
-</li>
-</div>
+  <!-- context / tools used / company info -->
+  <div class="container">
+    <div class="row d-content-center section-margins-overview">
+      <div class="col-md-8 listofparagraphs"><p>Billing is one of the most important aspects of any product. Almost <strong>3 million customers</strong> see their bill at Koodo each month. Naturally, we wanted to improve Koodo's billing experience as it holds a lot of potential opportunities for both the business and customer. The existing bill is archaic at Koodo. It's over a decade old. And it costs Telus <strong>~$7 million each year</strong> in customer calls due to its disjointed experience. Our goal was to create a simpler bill, which would reduce the number of customer calls, and create a better customer experience.</p></div>
+    </div>
   </div>
+  <div class="container">
+    <div class="row d-content-center">
+      <div class="col-md-8">
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1594307691/billing_inquiries_wqqmsk.png"><img class="mb-5 img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_300/v1594307691/billing_inquiries_wqqmsk.png"></a>
+    </div>
+    </div>
+  </div>
+  <!-- end of context -->
+
+  <div class="container">
+    <div class="row d-content-center mb-5">
+      <div class="col-md-8 challenge-section p-5">
+        <h6 class="section-title text-center mb-4">CHALLENGE</h6>
+        <p class="text-center mb-3 challenge-body">Make billing understandable.</p>
+      </div>
+    </div>
   </div>
 
+  <div class="container mb-5">
+    <div class="row d-content-center mb-4">
+      <div class="col-md-8">
+        <h4 class="listofparagraphs">Goals &amp; Success metrics</h4>
+        <li  class="listofparagraphs">Reduced customer calls related to billing</li>
+        <li  class="listofparagraphs">Customers are able to clearly navigate &amp; understand their bill</li>
+        <li  class="listofparagraphs">No more "1st bill shock"</li>
+      </div>
+    </div>
 
-
-
-
-<div class="container">
-  <div class="row d-content-center">
-  <div class="col-md-8 listofparagraphs ">
-    <h6 class="section-title">PROCESS</h6>
-    <h3>Rebirth of a style guide</h3>
-  <p class="">The starting point was a style guide created months ago. It was the only source of truth for new and existing designers, developers, and other team members. So, if we have something that works, why bother making a design system? What's the point? Our goal was to bring it to life. Giving it character, and the ability to breathe. A system that's efficient, consistent, accessible, and scalable.</p>
+    <div class="row d-content-center">
+      <div class="col-md-8">
+        <h4 class="listofparagraphs">My Responsibilities</h4>
+        <li  class="listofparagraphs">Discover opportunities for improvement</li>
+        <li class="listofparagraphs">Gather insights from users &amp; stakeholders</li>
+        <li class="listofparagraphs">Ideate potential solutions</li>
+        <li class="listofparagraphs">Design wireframes, hi-fidelity mockups, prototypes, and perform user tests</li>
+        <li class="listofparagraphs">Present findings and solutions to the team</li>
+      </li>
+    </div>
   </div>
-</div>
-</div>
-
-
-<div class="container">
-  <div class="row d-content-center">
-  <div class="col-md-8 listofparagraphs ">
-    <h6 class="section-title"></h6>
-    <h3>Efficient</h3>
-  <p class="">With style guides, designers have to re-create components each time they start a new project. That's a lot of time wasted that could be used to create productive work.
-With the addition of design system to the team, designers are able to drag-n-drop starter pages, and components into their sketch file and start building quickly!
-  </p>
-  <img class="img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/v1560618808/before_and_after_DSM.png_s2fg0h.png" alt="Before &amp; after Design System">
-  </div>
-</div>
-</div>
-
-<div class="container">
-  <div class="row d-content-center">
-  <div class="col-md-8 listofparagraphs ">
-    <h6 class="section-title"></h6>
-    <h3>Consistent</h3>
-  <p class="mb-5">Creating consistent design was a challenge before a design system. Buttons had different padding, wrong text styles being used, and even wrong colours! That's a big problem when building in a large-scale environment.
-  Now, it is always consistent because there is one source of truth that lives &amp; breathes.</p>
-<img class="img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/v1555254117/button_-_how_to_make_2_pkmpop.png" alt="Consistent usage of buttons example">
-  </div>
-</div>
-</div>
-
-<div class="container">
-  <div class="row d-content-center">
-  <div class="col-md-8 listofparagraphs ">
-    <h6 class="section-title"></h6>
-    <h3>Accessible</h3>
-  <p class="">When we were building the Lumen Design system, we made sure to keep accessibility in mind at all times. Before components are added to the design system, they were tested to meet <a target="_blank" href="https://accessontario.com/aoda/" class="tipped" data-toggle="tooltip" data-placement="top" title="Accessibility for Ontarians with Disabilities Act">AODA</a> and <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="tipped" data-toggle="tooltip" data-placement="top" title="Web Content Accessibility Guidelines">WCAG</a> guidelines. </p>
-<img class="img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/v1555253919/Screen_Shot_2019-04-14_at_9.57.42_AM_qreebz.png" alt="Accessible button">
-  </div>
-</div>
-</div>
-
-<div class="container">
-  <div class="row d-content-center">
-  <div class="col-md-8 listofparagraphs ">
-    <h6 class="section-title"></h6>
-    <h3>Scalable</h3>
-  <p class="">Being able to scale the design system is a top priority at Sun Life. Because it's a living &amp; breathing thing, the Lumen design system is constantly updated with newer and better components using the best UX practices.
-  </p>
-  <p class="mb-5">Using the Atomic design theory has been priceless in this journey. Proper document &amp; guidelines help the team use components with more flexibilty and consistency. DSM allows everyone to easily access design components required to start building quickly.
-  </p>
-  <img class="img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/v1555254048/usage_tips_component_ewknzw.png" alt="Design System usage documentation">
-  </div>
-</div>
 </div>
 
 
 <div class="container">
   <div class="row d-content-center">
-  <div class="col-md-8 listofparagraphs ">
-    <h6 class="section-title"></h6>
-    <h3>Final thoughts</h3>
-  <p class="mb-5">Now let's go back to the question: What's the point of creating a design system? I'm glad you asked! It's to help teams create, communicate, and innovate with ease.
-  </p>
-<img class="img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/v1555254259/final_thoughts_toa9in.png" alt="How teams benefit from the Design system">
+    <div class="col-md-8 listofparagraphs ">
+      <h6 class="section-title">DISCOVERY</h6>
+      <h3>Themes contributing to pain-points</h3>
+      <p class="post-category">No logical breakdown</p>
+      <p class="post-category">Lacks Visual heirarchy</p>
+      <p class="post-category mb-4">Uses too much Jargon</p>
+      <p class="">Prior to me joining the team, there was some insights already gathered from workshops and sketching sessions. We wanted to spend more time on discovery so we knew we're solving the right problems. Our next steps to making a better billing experience was more gathering insights. Starting discussions with billing-related teams, including stakeholders, customer service representatives, and customers. We wanted to understand if there were any key themes contributing to the problem. This way, we can focus on solving those major pain-points.</p>
+    </div>
   </div>
 </div>
+
+
+<div class="container">
+  <div class="row d-content-center">
+    <div class="col-md-8 listofparagraphs ">
+      <h6 class="section-title"></h6>
+      <h3>Breaking it down</h3>
+      <p class="">Take a look at the existing billing layout.</p>
+      <div class="d-flex">
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1594308588/top_half_bill_zxizfz.png"><img class="mb-5 img-responsive pr-1" src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_500/v1594308588/top_half_bill_zxizfz.png"></a>
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1594309792/bottom_half_bill_gffwyk.png"><img class="mb-5 img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_500/v1594309792/bottom_half_bill_gffwyk.png"></a>
+      </div>
+      <p>The bill can be broken down into 2 different sections. (top) Balance due, and (bottom) Your current bill.</p>
+      <p>The problem is in the bottom half of the bill. Customers can clearly see the amount they owe, but the breakdown of it's details is not clear. For example: <li>What is "Untld min Plan SFD"?</li>
+        <li>What Add-ons do I have?</li>
+        <li>What are Partial charges?</li>
+        <li>Why was I charged $23.83 and -$27.50?</li>
+      </p>
+    </div>
+  </div>
 </div>
+
+<div class="container">
+  <div class="row d-content-center">
+    <div class="col-md-8 listofparagraphs">
+      <h6 class="section-title"></h6>
+      <h3>Gathering insights</h3>
+      <p class="mb-4">We asked our customers and customer representatives to tell us about their pain-points. Customers found it difficult to understand their bill, especially when it was different from their regular bill. There was no way to understand what caused the additional charges.</p>
+
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1590501701/mobilemasters_h1u8ko.png"><img class="mb-5 img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_350/v1590501701/mobilemasters_h1u8ko.png"></a>
+
+
+      <p class="pull-quote mb-4">"Customers only care when their bill is different from normal"</p>
+
+      <p class="mb-5">The problem wasn't that customers had the wrong charges. It was the way billing was presented. Customers wanted an itemized version of the bill. They wanted to see the details. We continued gathering insights from other sources. Including VOC (Voice of the customer), Help article feedback, Mobile masters team, and more. In the end, customers were able to understand the bill better through the Print PDF bill, but not the eBill. Why? Because the PDF bill was more way descriptive about their services and charges.</p>
+
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1590692192/koodo_pdf_bill_page_3_r5ambe.png"><img class="mb-5 img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_400/v1590692192/koodo_pdf_bill_page_3_r5ambe.png"></a>
+      <p>Summary of customer's bill. (shown using a test account)</p>
+      <p class="mb-5">The PDF bill is very detailed about a customer's bill. It not only shows the summary, but the itemized details about a customer's usage, and any service changes.</p>
+
+      <div class="mb-4">
+        <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_1500/v1590795340/koodo_bill_first_page_pmmuup.png"><img src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_400/v1590795340/koodo_bill_first_page_pmmuup.png"></a>
+
+        <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_1500/v1590795340/monthly_partial_and_usage_charges_ukq6xs.png"><img src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_400/v1590795340/monthly_partial_and_usage_charges_ukq6xs.png"></a>
+
+      </div>
+      <p class="mb-5">These are all great insights as we can use these within the billing page to inform customers about their bill details. And customers won't have to rely on reading a paper bill anymore.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row d-content-center">
+    <div class="col-md-8 listofparagraphs">
+      <h6 class="section-title">IDEATION</h6>
+      <h3>Exploring ideas</h3>
+      <p class="mb-4">With those insights, it was time to figure out possible options for how we might want to show the bill instead.</p>
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1590177840/layout_options_mmmsfe.jpg"><img class="mb-4 img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/c_scale,h_400/v1590177840/layout_options_mmmsfe.jpg"></a>
+      <p>From many different layout options, we decided to separate recurring from non-recurring charges. It's how we organized our PDF bill, so customers are already familiar with it.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Wireframes -->
+<div class="container mb-4">
+  <div class="row d-content-center">
+    <div class="col-md-8 listofparagraphs ">
+      <h6 class="section-title"></h6>
+      <h3 class="mb-4">Wireframing</h3>
+      <a data-fancybox="gallery" href="https://res.cloudinary.com/rajangra/image/upload/v1591026794/koodo_billing_wireframe_uefmj1.gif"><img class="mb-5 img-responsive" src="https://res.cloudinary.com/rajangra/image/upload/c_fill,g_north,h_600,w_200/v1591026794/koodo_billing_wireframe_uefmj1.gif"></a>
+      <p>The GIF above shows the transformation of the redesigned billing page. Wireframes were used to test and review with stakeholders and customers.</p>
+      <li>Are customers able to understand their bill?</li>
+      <li>Have we considered their pain-points and tried to solve them?</li>
+      <li>What opportunities might we have at this point to increase the success of this project?</li>
+
+    </div>
+  </div>
+</div>
+
+<!-- User testing -->
+<div class="container">
+  <div class="row d-content-center">
+    <div class="col-md-8 listofparagraphs ">
+      <h6 class="section-title"></h6>
+      <h3>How did the users find it?</h3>
+      <p class="">We user tested multiple times during different stages of the project. Early wireframe phase, and after stakeholder reviews. We wanted to see if we solved the major pain-points of the bill.
+        We found that customers certainly preferred the new layout. Although, some customers were confused by "Partial charges".
+        We could only use so much copy to explain the meaning of "Partial charges". Instead, we created a visual that would help break down their bill details. This visual helped customers understand their day of activation to the start of a regular billing cycle.</p>
+      <!-- <div class="mb-4">
+        <li>What do you expect to see in your first bill?</li>
+        <li>Can you explain how your bill adds up?</li>
+        <li>Can you explain why you have 'partial charges'?</li>
+        <li>What would you do to find out more about your plan?</li>
+        <li>What would you do if you needed help?</li>
+        <li>What are your thoughts on the termonilogy being used?</li>
+        </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- Prototype -->
+<div class="container">
+  <div class="row d-content-center">
+    <div class="col-md-8 listofparagraphs ">
+      <h6 class="section-title">IMPLEMENTATION</h6>
+      <h3 class="mb-4">Turning into reality</h3>
+      <video class='video-content mb-4' controls autoplay>
+        <source src="https://res.cloudinary.com/rajangra/video/upload/v1591037745/billing_hi-fi_animated_prototype_chtzaw.mp4" type="video/mp4">
+          Koodo Billing Prototype video
+        </video>
+        <p class="align-center">
+          Walkthrough of the first iteration
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Iteration -->
+  <!-- <div class="container">
+    <div class="row d-content-center">
+      <div class="col-md-8 listofparagraphs ">
+        <h6 class="section-title"></h6>
+        <h3>Other</h3>
+        <p class="mb-5">changes...
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+
   <!-- lessons learned -->
 
   <div class="container listofparagraphs sometopmargin">
-  <div class="row d-content-center">
-    <div class="col-md-8 listofparagraphs">
-    <h3 class="listofparagraphs">🙌 Lessons learned</h3>
-      <li class="listofparagraphs">The end goal with design is to solve problems, not just have pretty looking UI</li>
-      <li class="listofparagraphs">Design must begin with accessibility in mind first, not last.</li>
-      <li class=listofparagraphs>You are not the user. Test the product with its users and then iterate.</li>
-  </div>
-</div>
-</div>
-
-<div class="container">
-<div class="row d-content-center">
-    <div class="col-md-8 listofparagraphs">
-    <h3 class="listofparagraphs">🤔 Next step recommendations</h3>
-    <li class="listofparagraphs">Continue adding more comprehensive documentation on DSM</li>
-    <li class="listofparagraphs">Find UI issues that cause confusion in users and introduce better options</li>
-    <li class="listofparagraphs">Spread the usage of DSM between other teams at Sun Life (including devs)</li>
+    <div class="row d-content-center">
+      <div class="col-md-8 listofparagraphs">
+        <h3 class="listofparagraphs">🙌 Lessons learned</h3>
+        <li class=listofparagraphs>Gather as much info about the problem before starting to design any solutions.</li>
+        <li class="listofparagraphs">Document everything from day 1. It's super helpful in retrospective.</li>
+        <li class="listofparagraphs">Early user testing is better than waiting till the end. Solve the right problem.</li>
+      </div>
     </div>
   </div>
-    </div>
-
-<!-- Thank you for reading -->
 
   <div class="container">
-  <div class="row">
-    <div class="col-md-12 ">
-    <h3 class="extrabigtext align-center sometopmargin-text">Thanks for reading! 🙏</h3>
-    <p class="sometopmargin align-center">
-      <strong>Special thanks to:</strong> <a class="link-name" target="_blank" href="https://www.linkedin.com/in/andrewnoelca/">Andrew Noel</a> — Design Lead, for helping me along this journey.
-    </p>
-  </div>
-  </div>
+    <div class="row d-content-center">
+      <div class="col-md-8 listofparagraphs">
+        <h3 class="listofparagraphs">🤔 Next step recommendations</h3>
+        <li class="listofparagraphs">Use less jargon with customers. UX copy should be human.</li>
+        <li class="listofparagraphs">Continue gathering real customer feedback and insights.</li>
+        <li class="listofparagraphs">Implement a feedback section on the billing page.</li>
+      </div>
     </div>
-
-
-
-<!-- CTA -->
-<div class="container cta-area">
-  <div class="row">
-<div class="col-md-12">
-<h4 class="align-center white-text">Get in Touch</h4>
-<h2 class="align-center white-text cta-text">Let's work together</h2>
-
-    <a class="btn-shaded-orange btn-padding main-font-used " href="mailto:rajanixd@gmail.com">Send an email</a>
-</div>
-  </div>
   </div>
 
 
-      <!-- Footer section -->
-                <div class="container less-top-padding-footer bottom-padding-footer">
-                  <div class="row">
-              <div class="col-lg-12 align-center footer-section" id="">
-         <span class="fa fa-heart red-heart bigheart pulse" data-toggle="tooltip" data-placement="top" title="Have a nice day!"></span>
-                </div>
-              </div>
-                </div>
+  <div class="container">
+    <div class="row d-content-center">
+      <div class="col-md-8">
+        <p class="sometopmargin">
+          <strong>Special thanks to</strong> <a class="link-name" target="_blank" href="https://www.linkedin.com/in/sonja-galletta-28a7a4126/">Sonja Galletta</a> — the most amazing Product Owner, and person I've ever worked with.
+        </p>
+      </div>
+    </div>
+  </div>
 
-          <!-- Footer end -->
+  <!-- CTA -->
+  <div class="container cta-area">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="align-center white-text">Like what you see?</h4>
+        <h2 class="align-center white-text cta-text">Let's work together</h2>
 
-                  <!-- Scripts and stuff-->
+        <a class="btn-shaded-orange btn-padding main-font-used " href="mailto:rajanixd@gmail.com">Send an email</a>
+      </div>
+    </div>
+  </div>
 
 
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-              <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-109064768-1','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+  <!-- Footer section -->
+  <div class="container less-top-padding-footer bottom-padding-footer">
+    <div class="row">
+      <div class="col-lg-12 align-center footer-section" id="">
+        <span class="fa fa-heart red-heart bigheart pulse" data-toggle="tooltip" data-placement="top" title="Made with love by Rajan."></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer end -->
+
+  <!-- Scripts and stuff-->
+
+
+  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-109064768-1','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 </html>
