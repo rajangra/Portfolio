@@ -57,14 +57,15 @@ $(document).ready(function(){
 
 
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-  // $(document).scroll(function() {
-  //   var y = $(this).scrollTop();
-  //   if (y < 150) {
-  //     $('#navbar').fadeIn();
-  //   } else {
-  //     $('#navbar').fadeOut();
-  //   }
-  // });
+
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y < 150) {
+      $('#navbar').fadeIn();
+    } else {
+      $('#navbar').fadeOut();
+    }
+  });
 
 
 });

@@ -290,11 +290,12 @@ http://www.phpied.com/delay-loading-your-print-css/
 
 body{
   padding-top: 4em;
-  -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein .5s; /* Firefox < 16 */
-  -ms-animation: fadein .5s; /* Internet Explorer */
-  -o-animation: fadein .5s; /* Opera < 12.1 */
-  animation: fadein .5s;
+  line-height: 1.8em !important;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
 }
 
 
@@ -328,24 +329,31 @@ body{
 }
 
 h2{
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 
 h4{
+
   font-size: 1em;
   font-weight: bold;
 }
 
 h5{
+
   font-weight: normal;
 }
 
 h6{
+
   font-size: 16px;
+
+
 }
 .normalsizetext{
+
   font-size: 20px;
+
 }
 
 .brandlogo{
@@ -374,19 +382,26 @@ background-image: url('../img/rajanlogoblue.svg');
 }*/
 
 h1{
+
   font-weight: bold;
   font-size: 2em;
   margin: 0.5em 0;
+
 }
 
 h1, h2, h3, h4, h5, h6{
+
   font-family: "Karla", "Helvetica Neue", "Helvetica";
 }
 
-/* heading margins */
-h1, .h1, h2, .h2, h3, .h3{
-    margin-top: 24px;
-    margin-bottom: 16px;
+p{
+
+  font-size: 18px;
+}
+
+
+h3{
+  font-size: 24px;
 }
 
 /*Utilities*/
@@ -429,10 +444,9 @@ blockquote{
   font-size: 21px;
 }
 
-/* paragraph class */
 p{
+
   font-family: 'Karla', sans-serif;
-  margin: 0 0 1em;
 }
 
 a:active{
@@ -483,11 +497,11 @@ background-size: 80% 100%;
 */
 .navbar-default{
   border-color: rgba(255, 240, 5, 0);
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar-nav{
-  padding: 4px 0px;
+  padding: 5px;
 }
 
 a:hover, a:focus{
@@ -542,7 +556,7 @@ a:hover, a:focus{
   }
   .navbar-nav {
     float: none!important;
-    margin-top: 1em;
+    margin-top: 7.5px;
   }
   .navbar-nav>li {
     float: none;
@@ -560,19 +574,9 @@ a:hover, a:focus{
 
 #top{
 
-  margin-bottom: 13em;
+  margin-bottom: 40vh;
 }
 
-#overlay{
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-}
 
 .footer-section{
 
@@ -613,6 +617,11 @@ a:hover, a:focus{
 
   padding-bottom: 50px;
 
+}
+
+.bottom-padding-footer{
+
+  padding-bottom: 50px;
 }
 
 .littletoppadding{
@@ -669,7 +678,7 @@ a:hover, a:focus{
 
 .cta-text{
 
-  font-size: 3em;
+  font-size: 70px;
 }
 
 .white-text{
@@ -679,9 +688,9 @@ a:hover, a:focus{
 
 .cta-area{
   background-color: #f9f9f9;
-  padding: 3em 0.5em;
-  margin-top: 2em;
-  border-radius: 4px;
+  padding: 4rem;
+  margin-top: 4rem;
+  border-radius: 5px;
 }
 
 .challenge-section{
@@ -690,7 +699,7 @@ a:hover, a:focus{
 }
 
 .challenge-body{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -782,7 +791,7 @@ a:hover, a:focus{
 
 .btn-padding{
 
-  margin-top: 2em;
+  margin-top: 50px;
 
 }
 
@@ -908,7 +917,7 @@ input[type=text]:focus, [id=subject]:focus, [type=email]:focus {
 }
 /*desktop*/
 .h1-title {
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 0px;
   margin-top: 2.5rem;
   color: #03043a;
@@ -1103,9 +1112,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
   font-family: 'Karla', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #111;
-  line-height: 150%;
 }
 
 .biggersizedh2{
@@ -1305,13 +1313,14 @@ margin-top: 3.5em;
   .sec-testimonial .row {
     /*display: flex;
     justify-content: center;*/
+    padding-bottom: 2em;
   }
 
 
   .sec-testimonial p{
     font-size: 1.5em;
     line-height: 1.5em;
-    font-style: italic;
+    font-family: 'Spectral', serif;
   }
 
   .sec-testimonial i {
@@ -1331,7 +1340,7 @@ margin-top: 3.5em;
 
   .highlighted-text{
     padding: 0px 8px;
-    background-color: rgb(143 167 197 / 20%);
+    background-color: rgba(60, 63, 255, 0.2);
     border-radius: 4px;
   }
 
@@ -1393,7 +1402,7 @@ margin-top: 3.5em;
       font-weight: 100;
     }
     .cta-text {
-      font-size: 2em;
+      font-size: 40px;
     }
     h4 {
       font-size: 20px;
@@ -1403,7 +1412,7 @@ margin-top: 3.5em;
       font-size: 24px;
     }
     li, p {
-      font-size: .9em;
+      font-size: 1em;
     }
     .h1-title{
       font-size: 2.5em;
@@ -1419,14 +1428,13 @@ margin-top: 3.5em;
       font-size: 1.5em;
     }
 
+    .sec-testimonial .row {
+      padding-bottom: 2em;
+    }
+
     .sizedimage-sunlife{
       display: none;
     }
-
-.sec-testimonial p{
-  font-size: 1.1em;
-}
-
 
   }
 
@@ -1443,7 +1451,7 @@ margin-top: 3.5em;
     }
 
     .sec-testimonial p{
-      font-size: 1.7em;
+      font-size: 1.5em;
     }
 
     .d-flex-desktop{
@@ -1453,11 +1461,6 @@ margin-top: 3.5em;
     .d-content-center {
       display: flex;
       justify-content: center;
-    }
-
-    h1, .h1, h2, .h2, h3, .h3{
-        margin-top: 0;
-        margin-bottom: 16px;
     }
 
   }
