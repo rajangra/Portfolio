@@ -1,0 +1,172 @@
+/* Import Karla font */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* utilities */
+
+.mt-6{
+margin-top: 6rem;
+}
+
+.mt-9{
+  margin-top: 9rem;
+}
+
+.mb-6{
+  margin-bottom: 6rem;
+}
+
+body {
+  font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1.1rem;
+  color: #03043a;
+}
+
+#top-content {
+  margin-bottom: 16rem;
+}
+
+.navbar{
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.navbar-brand {
+  margin-right: 4rem;
+  font-weight: bold;
+}
+
+.nav-link{
+padding: 0.75rem 0;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+
+.img-hero{
+  height: 100px;
+}
+
+/* typography and links */
+
+a{
+  font-weight: bold;
+  color: #3c3fff;
+}
+h1, h2, h3,h4,h5,h6{
+  font-weight: bold;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+.h2-description{
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.p-quote{
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.p-highlight{
+  background-color: #e3ebff;
+  padding: 0 .5rem;
+  border-radius: 4px;
+}
+
+.p-regular{
+  font-weight: normal;
+}
+
+.container-cta{
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.container-cta h2{
+  font-size: 3rem;
+}
+
+.container-cta a{
+  color: white;
+  background-color: #3c3fff;
+  border-radius: 50px;
+}
+
+.container-cta a:hover{
+  text-decoration: none;
+  opacity: .8;
+}
+
+.container-100{
+  font-size: 1.7rem;
+  text-align: center;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+user-select: none;          /* Likely future */
+transition: all .2s ease-in-out;
+}
+
+.container-100:hover{
+  cursor: none;
+}
+
+.cover-photo{
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  /* background: url("https://res.cloudinary.com/rajangra/image/upload/v1591981150/billing_evolution_ulgkdv.png") center; */
+  border-radius: 8px;
+  border: .5px solid #efefef;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px -4px rgba(0, 0, 0, 0.19);
+}
+
+.cover-photo:hover{
+  box-shadow: rgba(60, 93, 255, 0.3) 0px 30px 60px;
+  transform: scale(1.05, 1.05);
+}
+
+.img-500{
+  height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.img-container{
+  text-align: center;
+}
+
+/* media queries */
+@media (min-width: 768px){
+
+.line-height-reset{
+   line-height: 1;
+}
+
+body{
+  font-size: 1.3rem;
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+  .h1-bold{
+    font-size: 3.5rem;
+  }
+
+  .h2-description{
+    font-size: 2rem;
+  }
+
+  .container-cta h2{
+    font-size: 4rem;
+  }
+
+}
