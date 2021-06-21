@@ -10,8 +10,12 @@ html{
 
 /* utilities */
 
+.mb-5{
+  margin-bottom: 1em !important;
+}
+
 .mb-4em{
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 .mt-6{
@@ -97,6 +101,11 @@ h2{
 .p-quote{
   font-size: 1.5em;
   font-style: italic;
+}
+
+/* paragraph  */
+p{
+  /* margin-bottom: 2em; */
 }
 
 li{
@@ -189,15 +198,69 @@ b, strong{
 }
 
 
+/* about section */
+#about{
+  height: 12em;
+}
+
+/* testimonial section */
+
+.sec-testimonial{
+background-color: #f1f1f1;
+padding: 2em 0;
+border-radius: 2px;
+}
+
+/* quote */
+
+blockquote p{
+    font-size: 1em;
+    /* font-style: italic; */
+    font-family: 'Prompt';
+    font-weight: 300;
+  }
+
+.p-blockquote{
+  font-style: italic;
+  background-color: #f1f1f1;
+  padding: 1em;
+  border-radius: 2px;
+  margin-bottom: 1em;
+}
+
+.border-gray{
+  border: 1px solid #dae0e5;
+}
+
+.phone-radius{
+  border-radius: 24px;
+}
+
+
 /* media queries */
 @media (min-width: 768px){
+
+blockquote p{
+    font-size: 1.5em;
+  }
+
+
+/* utlities */
+
+.mb-5{
+  margin-bottom: 2em !important;
+}
+
+  .mb-4em{
+    margin-bottom: 4em;
+  }
 
   .line-height-reset{
     line-height: 1;
   }
 
   body{
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   h2{
@@ -228,29 +291,4 @@ b, strong{
 
 
 }
-
-/* about section */
-#about{
-  height: 15em;
-}
-
-/* testimonial section */
-
-.sec-testimonial{
-background-color: #f1f1f1;
-padding: 2em 0;
-border-radius: 2px;
-}
-
-/* quote */
-
-  blockquote p{
-    font-size: 1.5em;
-    /* font-style: italic; */
-    font-family: 'Prompt';
-    font-weight: 300;
-  }
-
-.p-blockquote{
-  font-style: italic;
-}
+/* end of media query */
