@@ -63,6 +63,7 @@ body {
   margin-right: 4em;
   font-weight: 500;
   font-family: 'Prompt';
+  padding: 0;
 }
 
 .nav-link{
@@ -298,10 +299,15 @@ blockquote p{
     padding: 0.1em 0;
   }
 
+.nav-item{
+  margin-bottom: 0 !important;
+}
+
   .navbar{
     background-color: rgb(255 255 255 / .9);
     box-shadow: none;
   }
+
 
 
 }
