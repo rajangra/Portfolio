@@ -48,10 +48,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-#top-content {
-  /* margin-bottom: 16em; */
-}
-
 /* navbar mobile */
 
 .navbar {
@@ -83,24 +79,12 @@ align-items: baseline;
   transform: scale(1.2); 
 }
 
-}
-
 
 /* typography and links */
 
-::selection {
-  background-color: #111;
-  color: white;
-}
-
 a {
   font-weight: 600;
-  color: #3c3fff;
 }
-
-a:hover,
-a:focus,
-a:active {}
 
 h1,
 h2,
@@ -113,7 +97,7 @@ h6 {
 }
 
 h1{
-  font-size: 3em;
+  font-size: 2em;
 }
 
 h2 {
@@ -228,7 +212,7 @@ animation: bounce 3s infinite;
 /* about section */
 #blankDiv {
   height: 40vh;
-  border-bottom: 4px dashed rgb(4, 2, 39);
+  border-bottom: 2px dashed rgb(218, 218, 218);
   margin-bottom: 3em;
 }
 
@@ -350,10 +334,22 @@ blockquote p {
 } */
 
 
+::selection {
+  background-color: #111;
+  color: white;
+}
+
+
+
   blockquote p {
     font-size: 1.5em;
   }
 
+  /* desktop typography */
+
+  h1{
+    font-size: 3em;
+  }
 
   /* desktop utlities */
 
@@ -404,4 +400,13 @@ blockquote p {
 
 }
 
-/* end of media query */
+/* end of 768px media query */
+
+/* media query 1200px */
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1170px;
+}
+}
+/* end of media query 1200px */
