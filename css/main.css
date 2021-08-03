@@ -294,7 +294,7 @@ animation: bounce 3s infinite;
 
 /* about section */
 #blankDiv {
-  height: 40vh;
+  height: 35vh;
   border-bottom: 2px dashed rgb(218, 218, 218);
   margin-bottom: 3em;
 }
