@@ -16,3 +16,5 @@ $('.btn-accordion').click(function() {
   $(".icon-chevron").toggleClass('la-angle-up');
   $(".icon-chevron").toggleClass('la-angle-down');
 });
+
+ 

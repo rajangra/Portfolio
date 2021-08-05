@@ -6,6 +6,18 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: #111;
+  color: white;
+}
+
+/* global  */
+
+.jump-nav{
+  display: none;
+}
+
+
 
 /* utilities */
 
@@ -71,9 +83,13 @@ body {
 
 /* navbar mobile */
 
+
 .navbar {
-align-items: baseline;
+  /* background-color: rgb(255 255 255 / .9); */
+  box-shadow: none;
+  align-items: baseline;
 }
+
 
 .navbar-brand {
   font-weight: 500;
@@ -133,7 +149,7 @@ h1{
 }
 
 .h1-small{
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 h2 {
@@ -141,7 +157,7 @@ h2 {
 }
 
 h3{
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .p-quote {
@@ -173,6 +189,9 @@ abbr[title]{
   font-weight: 300;
 }
 
+.container-hero{
+  height: 75vh;
+}
 
 .container-cta a {
   color: white;
@@ -294,9 +313,9 @@ animation: bounce 3s infinite;
 
 /* about section */
 #aboutTop {
-  height: 35vh;
-  border-bottom: 2px dashed rgb(218, 218, 218);
+  border-bottom: 2px dashed rgb(199, 199, 199);
   margin-bottom: 3em;
+  padding-bottom: 2em;
 }
 
 /* accordion */
@@ -345,7 +364,7 @@ animation: bounce 3s infinite;
 }
 
 blockquote h2{
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 blockquote p {
@@ -427,20 +446,6 @@ blockquote p {
 /* media queries */
 @media (min-width: 768px) {
 
-/* navbar desktop */
-
-/* .navbar-nav.navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%);
-} */
-
-
-::selection {
-  background-color: #111;
-  color: white;
-}
-
 /* desktop cover photo */
 
 .cover-photo {
@@ -453,11 +458,10 @@ blockquote p {
   /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px -4px rgba(0, 0, 0, 0.19); */
 }
 
-.cover-photo:hover {
-  /* box-shadow: rgb(16 10 96 / 0.2) 0px 30px 60px;
-  transform: scale(1.02, 1.02); */
-  cursor: none;
-}
+/* .cover-photo:hover {
+  box-shadow: rgb(16 10 96 / 0.2) 0px 30px 60px;
+  transform: scale(1.02, 1.02);
+} */
 
 
 
@@ -504,11 +508,6 @@ blockquote p {
     margin-bottom: 0 !important;
   }
 
-  .navbar {
-    background-color: rgb(255 255 255 / .9);
-    box-shadow: none;
-  }
-
 
 
 }
@@ -521,5 +520,21 @@ blockquote p {
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1170px;
 }
+
+.jump-nav{
+  display: inline-grid;
+  position: fixed;
+  top: 30vh;
+  left: 5vh;
+  z-index: 999;
+}
+
+.jump-nav a{
+  padding: .25em 0;
+  color: inherit;
+  font-size: .7em;
+  font-weight: 500;
+}
+
 }
 /* end of media query 1200px */
