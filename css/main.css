@@ -132,6 +132,11 @@ body {
 
 a {
   font-weight: 600;
+  color: #100e33;
+}
+
+a:hover{
+  color: #100e33;
 }
 
 h1,
