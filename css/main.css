@@ -468,6 +468,9 @@ blockquote p {
   transform: scale(1.02, 1.02);
 } */
 
+.project-locked:hover{
+  cursor: not-allowed;
+}
 
 
   blockquote p {
@@ -479,6 +482,10 @@ blockquote p {
   h1{
     font-size: 3em;
   }
+
+h5{
+  font-size: 1em;
+}
 
   /* desktop utlities */
 
