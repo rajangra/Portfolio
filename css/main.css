@@ -191,7 +191,7 @@ h6 {
 }
 
 h1{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .h1-small{
@@ -528,7 +528,8 @@ animation: bounce 3s infinite;
 .container-hero{
   background-color: var(--color-almost-black);
   color: white;
-  padding-top: 12rem;
+  padding-top: 20vh;
+
 }
 
 .tooltip .arrow{
@@ -577,7 +578,7 @@ animation: bounce 3s infinite;
 
 /* desktop typography */
 
-  h1{
+h1{
     font-size: var(--size-xlarge);
   }
 
@@ -648,7 +649,6 @@ h5{
 
 .container-hero{
   padding: 20vh;
-  height: 100vh;
 }
 
 }
