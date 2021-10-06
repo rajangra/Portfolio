@@ -214,7 +214,7 @@ h3{
 
 .font-light{
   /* font-weight: 300; */
-  opacity: 80%;
+  opacity: 60%;
 }
 
 li {
@@ -578,7 +578,7 @@ animation: bounce 3s infinite;
 /* desktop typography */
 
   h1{
-    font-size: var(--size-xxlarge);
+    font-size: var(--size-xlarge);
   }
 
 h5{
@@ -647,7 +647,8 @@ h5{
 }
 
 .container-hero{
-  padding: 30vh 20vh;
+  padding: 20vh;
+  height: 100vh;
 }
 
 }
