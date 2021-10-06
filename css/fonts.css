@@ -1,17 +1,17 @@
 @font-face {
-    font-family: Cera Pro;
-    src: url('./fonts/Cera-Pro-Light.otf') format('otf');
+    font-family: "Cera-Pro-Light";
+    src: url('../fonts/Cera-Pro-Light.otf') format('otf');
     font-weight: 300;
 }
 
 @font-face {
-    font-family: Cera Pro;
-    src: url('./fonts/Cera-Pro-Medium.otf') format('otf');
+    font-family: "Cera-Pro-Medium";
+    src: url('../fonts/Cera-Pro-Medium.otf') format('otf');
     font-weight: 500;
 }
 
 @font-face {
-    font-family: Cera Pro;
-    src: url('./fonts/Cera-Pro-Bold.otf') format('otf');
+    font-family: "Cera-Pro-Bold";
+    src: url('../fonts/Cera-Pro-Bold.otf') format('otf');
     font-weight: 600;
 }
