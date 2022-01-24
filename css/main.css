@@ -9,9 +9,10 @@
 
 :root{
 /* Size */
---size-normal: 1.25rem; 
+--size-body: 19px;
+--size-normal: 1.5rem; 
 --size-medium: 3rem;
---size-xlarge: 4rem;
+--size-xlarge: 3.5rem;
 --size-xxlarge: 6rem;
 
 /* weight */
@@ -21,12 +22,12 @@
 
 /* colors */
 --color-midnightblue: #1f2540;
---color-almost-black: #060916;
+--color-almost-black: #111;
 --color-bright-lilac: #bb98ff;
 --color-blue-purple: #989bff;
---color-baby-blue: #98c6ff;
+--color-baby-blue: #8dddff;
 --color-transparent-10: #0000001f;
---color-body-bg: #eff1f7;
+--color-body-bg: #f2f3f7;
 }
 
 html {
@@ -34,8 +35,8 @@ html {
 }
 
 ::selection {
-background-color: rgb(255, 244, 89);
-color: var(--color-almost-black);
+background-color: #ffe059;
+color: black;
 }
 
 /* global  */
@@ -104,29 +105,29 @@ color: var(--color-almost-black);
 
 body {
   font-family: "Prompt", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 20px;
-  line-height: 1.55;
-  color: var(--color-almost-black);
-  font-weight: 400;
+  font-size: var(--size-body);
+  line-height: 1.618;
+  color: black;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  letter-spacing: 0.02em;  
-  background-color: var(--color-body-bg);
+  cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyMiAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuODMgMjIuNzg4NUwxLjk1ODc0IDMuNTUxOTFMMTcuNjgyNSAxNC43OTA4TDkuNzUwNTYgMTUuOTMzNkw5LjE1NjY5IDE2LjAxOTFMOC43ODU2NiAxNi40OTA2TDMuODMgMjIuNzg4NVoiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==), auto;
+
 }
 
 /* navbar mobile */
 
 .navbar {
-  color: white;
   box-shadow: none;
-  align-items: baseline;
+  align-items: center;
   margin-top: var(--size-normal);
 }
 
 
 .navbar-brand {
   padding: 0;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: var(--size-normal);
+  margin-right: 4rem;
 }
 
 .nav-link {
@@ -138,7 +139,7 @@ body {
   margin: 0 .5em;
   padding: 0 0;
   color: inherit;
-  font-size: var(--size-normal);
+  font-size: var(--size-body);
 }
 
 /* .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
@@ -170,14 +171,12 @@ border-bottom: 1px dotted black;
 }
 
 a{
-  color: var(--color-almost-black);
-  transform: scale(1);
+  color: black;
 }
 
 a:hover{
-/* border-bottom: 2px solid var(--color-almost-black); */
 text-decoration: none;
-color: var(--color-almost-black);
+color: black;
 }
 
 h1,
@@ -188,6 +187,7 @@ h5,
 h6 {
   font-weight: 500;
   font-family: "Prompt";
+  line-height: 125%;
 }
 
 h1{
@@ -204,7 +204,6 @@ h2 {
 
 h3{
   font-size: 1.25rem;
-  opacity: .75;
 }
 
 .p-quote {
@@ -217,9 +216,6 @@ h3{
   opacity: 60%;
 }
 
-li {
-  margin-bottom: 0.5rem;
-}
 
 b,
 strong {
@@ -242,7 +238,8 @@ abbr[title]{
 }
 
 p{
-  opacity: .75;
+  margin-bottom: 1.5rem;
+  font-family: "Open Sans";
 }
 
 
@@ -346,6 +343,10 @@ animation: bounce 3s infinite;
 
 /* animation end */
 
+
+ 
+
+
 .container-100 {
   font-size: 1.7rem;
   text-align: center;
@@ -363,6 +364,10 @@ animation: bounce 3s infinite;
   cursor: none;
 }
 
+
+.container-vh{
+
+}
 
 /* about section */
 #about {
@@ -388,10 +393,6 @@ animation: bounce 3s infinite;
   flex-direction: column;
 }
 
-
-.project-title{
-  /* font-size: 2rem; */
-}
 
 .project i{
   transition: all .3s ease-out;
@@ -455,18 +456,16 @@ animation: bounce 3s infinite;
 /* testimonial section */
 
 .sec-testimonial {
- border-radius: .5rem;
- background-color: var(--color-almost-black);
+ border-radius: .25rem;
+ /* background-color: var(--color-baby-blue); */
 }
 
 /* quote */
 
-.blockquote{
-  color: var(--color-baby-blue);
-}
 
-.blockquote p{
-  color: white;
+.blockquote{
+ font-family: "Open Sans";
+ font-size: var(--size-body);
 }
 
 .border-gray {
@@ -485,7 +484,7 @@ animation: bounce 3s infinite;
 /* tooltip */
 
 .tooltip-inner{
-  font-size: 4rem;
+  font-size: 2rem;
   border-radius: 8px;
   padding: 0.5em;
   max-width: 100%;
@@ -622,14 +621,10 @@ h5{
 /* media query 1200px */
 
 @media (min-width: 1200px){
-
-
-.navbar{
-  padding: 2vh 20vh;
-}
+ 
 
 .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1170px;
+    max-width: 95%;
 }
 
 .jump-nav{
