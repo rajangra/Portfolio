@@ -1,17 +1,17 @@
 @font-face {
-    font-family: "Cera-Pro-Light";
-    src: url('../fonts/Cera-Pro-Light.otf') format('otf');
-    font-weight: 300;
+    font-family: 'whytemedium';
+    src: url('/fonts/whyte-medium-webfont.woff2') format('woff2'),
+         url('/fonts/whyte-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-    font-family: "Cera-Pro-Medium";
-    src: url('../fonts/Cera-Pro-Medium.otf') format('otf');
-    font-weight: 500;
-}
+    font-family: 'whytebook';
+    src: url('/fonts/whyte-book-webfont.woff2') format('woff2'),
+         url('/fonts/whyte-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-@font-face {
-    font-family: "Cera-Pro-Bold";
-    src: url('../fonts/Cera-Pro-Bold.otf') format('otf');
-    font-weight: 600;
 }
