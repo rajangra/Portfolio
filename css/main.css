@@ -124,6 +124,61 @@ body {
   font-size: var(--size-normal);
   margin-right: 4rem;
   font-family: "whytemedium";
+
+  background: linear-gradient(
+    135deg,
+    #f37127,
+    #f3b311,
+    #6cf311,
+    #11c628,
+    #fdeff9,
+    #ec38bc,
+    #7303c0,
+    #03001e
+  );
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 18% 0%;
+  }
+  50% {
+    background-position: 83% 100%;
+  }
+  100% {
+    background-position: 18% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 18% 0%;
+  }
+  50% {
+    background-position: 83% 100%;
+  }
+  100% {
+    background-position: 18% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 18% 0%;
+  }
+  50% {
+    background-position: 83% 100%;
+  }
+  100% {
+    background-position: 18% 0%;
+  }
 }
 
 .nav-link {
