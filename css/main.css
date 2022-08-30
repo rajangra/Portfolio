@@ -293,9 +293,9 @@ abbr[title] {
   font-weight: 400;
 }
 
+/* paragraph */
 p {
   margin-bottom: 1.5rem;
-  font-family: "Open Sans";
 }
 
 .container-cta a {
