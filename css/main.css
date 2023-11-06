@@ -109,7 +109,8 @@ body {
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: var(--size-body);
   line-height: 1.618;
-  color: var(--color-almost-black);
+  color: #f2f2f2;
+  background-color: rgb(5, 5, 10);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyMiAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuODMgMjIuNzg4NUwxLjk1ODc0IDMuNTUxOTFMMTcuNjgyNSAxNC43OTA4TDkuNzUwNTYgMTUuOTMzNkw5LjE1NjY5IDE2LjAxOTFMOC43ODU2NiAxNi40OTA2TDMuODMgMjIuNzg4NVoiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==),
@@ -231,12 +232,13 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: white;
+  opacity: 0.8;
 }
 
 h1,
@@ -323,6 +325,7 @@ strong {
 
 .p-tag {
   font-weight: var(--weight-normal);
+  opacity: 0.8;
 }
 
 abbr[title] {
@@ -337,7 +340,7 @@ abbr[title] {
 /* paragraph */
 p {
   margin-bottom: 1.5rem;
-  color: var(--color-bluish-gray);
+  color: white;
 }
 
 /* list item / li */
@@ -703,7 +706,7 @@ img {
   /* desktop typography */
 
   h1 {
-    font-size: var(--size-xlarge);
+    font-size: var(--size-medium);
   }
 
   h5 {
