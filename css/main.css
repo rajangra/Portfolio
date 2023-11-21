@@ -576,7 +576,8 @@ li {
   transform: scale(1.1);
 }
 
-img {
+img,
+video {
   border-radius: 30px;
   border: 1px solid rgb(232, 232, 232);
 }
@@ -862,8 +863,16 @@ img {
 
   /* desktop sections  */
 
-  .section-about {
+  /* .section-about {
     width: 600px;
+  } */
+
+  .section-about a {
+    border-bottom: 1px dotted var(--color-almost-black);
+  }
+
+  .section-about-visual {
+    width: 1140px;
   }
 
   .section-expertise .row {
