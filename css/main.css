@@ -863,9 +863,9 @@ video {
 
   /* desktop sections  */
 
-  /* .section-about {
-    width: 600px;
-  } */
+  .section-about .img-hero {
+    height: 250px;
+  }
 
   .section-about a {
     border-bottom: 1px dotted var(--color-almost-black);
