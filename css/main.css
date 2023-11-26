@@ -1,5 +1,11 @@
 /* Import font */
 
+/* Nothing you could do - testimonial font  */
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+
+/* unbounded for headings  */
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Unbounded:wght@500&display=swap");
+
 /* Regular */
 @font-face {
   font-family: "PPNeueMontreal-Regular";
@@ -183,6 +189,11 @@ body {
   box-shadow: none;
   align-items: center;
   margin-top: var(--size-normal);
+  /* justify-content: center; */
+}
+
+.navbar .main-nav {
+  margin: 1rem 0;
 }
 
 @-webkit-keyframes AnimationName {
@@ -289,6 +300,7 @@ h4,
 h5,
 h6 {
   color: var(--color-almost-black);
+  /* font-family: "Unbounded", sans-serif; */
 }
 
 .underline-dotted {
@@ -627,6 +639,11 @@ video {
 
 .section-testimonial h3 {
   font-size: 3rem;
+  /* font-family: "Nothing You Could Do", cursive; */
+}
+
+.section-testimonial p {
+  margin-bottom: 1rem;
 }
 
 /* quote */
@@ -744,6 +761,14 @@ video {
     transition: all 0.3s ease-out;
     border: 1px solid rgb(196, 196, 196);
     overflow: hidden;
+  }
+
+  .navbar {
+    justify-content: left;
+  }
+
+  .navbar .main-nav {
+    margin: auto;
   }
 
   .img-70 {

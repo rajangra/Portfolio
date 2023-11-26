@@ -124,7 +124,13 @@
             />
           </div>
 
-          <h1 class="mt-4 mb-4 intro-hero">
+          <h1
+            class="mt-4 mb-4 intro-hero"
+            class="container mb-6"
+            data-aos="fade-up"
+            data-aos-duration="250"
+            data-aos-easing="ease"
+          >
             <strong>
               Hi, I’m Rajan. <br />
               <span>
@@ -269,21 +275,22 @@
     </script>
 
     <script src="js/main.js"></script>
-    <!-- Google Analytics -->
-    <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-109064768-1", "auto");
-      ga("send", "pageview");
-    </script>
+
+    <!-- Google tag (gtag.js) -->
     <script
-      src="https://www.google-analytics.com/analytics.js"
       async
-      defer
+      src="https://www.googletagma5nager.com/gtag/js?id=G-5GXCK6S26E"
     ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5GXCK6S26E");
+    </script>
+
     <!-- Lottie  -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
