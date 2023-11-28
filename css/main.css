@@ -889,7 +889,7 @@ video {
   /* desktop sections  */
 
   .section-about .img-hero {
-    height: 250px;
+    height: auto;
   }
 
   .section-about a {
