@@ -72,8 +72,7 @@
   --weight-bold: 600;
 
   /* colors */
-  --color-midnightblue: #1f2540;
-  --color-almost-black: #1d1d1f;
+  --color-almost-black: #0e0e1e;
   --color-not-white: #f2f2f2;
   --color-bright-lilac: #bb98ff;
   --color-blue-purple: #989bff;
@@ -132,6 +131,10 @@ html {
 
 .mt-12 {
   margin-top: 12rem;
+}
+
+.mt-20 {
+  margin-top: 20vh;
 }
 
 /* mobile  */
@@ -342,11 +345,11 @@ h2 {
     #7303c0,
     #03001e
   );
-  background-size: 800% 800%;
+  background-size: 500% 500%;
 
-  -webkit-animation: AnimationName 15s ease infinite;
-  -moz-animation: AnimationName 15s ease infinite;
-  animation: AnimationName 15s ease infinite;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -369,6 +372,17 @@ h3 {
 
 .section-expertise li {
   list-style-type: none;
+}
+
+.section-highlight {
+  background-color: var(--color-almost-black);
+  height: 90vh;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.section-highlight h3 {
+  color: var(--color-not-white);
 }
 
 .heading-medium {
@@ -591,7 +605,7 @@ li {
 img,
 video {
   border-radius: 30px;
-  border: 1px solid rgb(232, 232, 232);
+  border: 1px solid rgb(211 212 216);
 }
 
 .img-no-border {
@@ -992,4 +1006,9 @@ ul {
 .container-sm,
 .container-xl {
   max-width: 95%;
+}
+
+.blurry-text {
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
