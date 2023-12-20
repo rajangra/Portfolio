@@ -89,8 +89,7 @@ html {
 }
 
 ::selection {
-  background-color: #ffe059;
-  color: black;
+  background-color: #7559ff69;
 }
 
 /* global  */
@@ -166,7 +165,7 @@ body {
   color: #6e6e73;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyMiAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuODMgMjIuNzg4NUwxLjk1ODc0IDMuNTUxOTFMMTcuNjgyNSAxNC43OTA4TDkuNzUwNTYgMTUuOTMzNkw5LjE1NjY5IDE2LjAxOTFMOC43ODU2NiAxNi40OTA2TDMuODMgMjIuNzg4NVoiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg==),
+  cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMSAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjU2MjIgMTYuMDQ0NUw0LjA0Mjk3IDIuMTU5NjVDMy4zMDM2NSAxLjcyMzE4IDIuMzk0MjMgMi4zNTk5NiAyLjU1MTUyIDMuMjAzOThMNy41NTQ5OCAzMC4wNTM3QzcuNzIwMTIgMzAuOTM5OCA4Ljg4MTI3IDMxLjE3MjMgOS4zNzQ4NCAzMC40MThMMTUuNjAxNyAyMC45MDE5QzE1Ljc0MjMgMjAuNjg3IDE1Ljk2MDEgMjAuNTM0NSAxNi4yMTAxIDIwLjQ3NThMMjcuMjgyMSAxNy44NzkyQzI4LjE1OTcgMTcuNjczNCAyOC4zMzg0IDE2LjUwMjggMjcuNTYyMiAxNi4wNDQ1WiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iNCIvPgo8L3N2Zz4K),
     auto;
 }
 
@@ -283,7 +282,7 @@ body {
 }
 
 .img-hero {
-  height: 120px;
+  height: 75px;
   border-radius: 1000px;
 }
 
@@ -446,6 +445,14 @@ li {
 
 .footer h2 {
   color: white;
+}
+
+.footer .p-light {
+  transition: all 0.3s ease-out;
+}
+
+.footer .p-light:hover {
+  color: var(--color-not-white);
 }
 
 .p-large {
@@ -769,6 +776,7 @@ video {
 }
 
 /* media queries start */
+
 @media (min-width: 768px) {
   /* desktop project image */
   .project-img {
@@ -836,7 +844,7 @@ video {
   /* desktop utlities */
 
   .intro-hero {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .text-shadow {
@@ -1011,4 +1019,8 @@ ul {
 .blurry-text {
   color: transparent;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container-vh {
+  height: 40vh;
 }
