@@ -130,14 +130,7 @@
           data-aos-duration="250"
           data-aos-easing="ease"
         >
-          <strong>
-            Senior Product Designer based in Vancouver, BC.
-            <br />
-            <span>
-              I help teams create impactful products that people
-              <em><span class="text-shadow">want and love.</span></em>
-            </span>
-          </strong>
+          <strong id="intro-text"> </strong>
         </h1>
 
         <!-- start bullet section -->
@@ -273,6 +266,32 @@
     </script>
 
     <script src="js/main.js"></script>
+
+    <!-- type it  -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+      new TypeIt("#intro-text", {
+        speed: 50,
+        startDelay: 900,
+        afterComplete: function (instance) {
+          instance.destroy();
+        },
+      })
+        .type("Product Designer you've been looking for?")
+        .pause(1000)
+        .move(null, { to: "START", instant: true, delay: 300 })
+        .type("The ")
+        .move(null, { to: "END", instant: true, delay: 300 })
+        .delete(1, { delay: 100, instant: true })
+        .type(".")
+        .type("</br>")
+        .type(
+          "I help teams create impactful products that people" +
+            '<em><span class="text-shadow"> want and love.</span>'
+        )
+
+        .go();
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
