@@ -60,7 +60,7 @@
 
 :root {
   /* Size */
-  --size-body: 19px;
+  --size-body: 1.2rem;
   --size-normal: 1.5rem;
   --size-medium: 2.5rem;
   --size-xlarge: 4rem;
@@ -437,7 +437,7 @@ abbr[title] {
 /* paragraph */
 p {
   margin-bottom: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 /* list item / li */
@@ -778,6 +778,10 @@ video {
   display: none;
 }
 
+.section-about a {
+  border-bottom: 2px dotted var(--color-almost-black);
+}
+
 /* media queries start */
 
 @media (min-width: 768px) {
@@ -917,10 +921,6 @@ video {
     height: auto;
   }
 
-  .section-about a {
-    border-bottom: 1px dotted var(--color-almost-black);
-  }
-
   .section-about-visual {
     width: 1140px;
   }
@@ -1026,4 +1026,11 @@ ul {
 
 .container-vh {
   height: 40vh;
+}
+
+.summary-list {
+  background-color: var(--color-off-white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
 }
