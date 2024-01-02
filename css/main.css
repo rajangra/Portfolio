@@ -60,7 +60,7 @@
 
 :root {
   /* Size */
-  --size-body: 1.2rem;
+  --size-body: 1.5rem;
   --size-normal: 1.5rem;
   --size-medium: 2.5rem;
   --size-xlarge: 4rem;
@@ -363,7 +363,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .section-expertise {
@@ -445,7 +445,7 @@ abbr[title] {
 /* paragraph */
 p {
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* list item / li */
