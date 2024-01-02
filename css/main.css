@@ -63,7 +63,7 @@
   --size-body: 1.5rem;
   --size-normal: 1.5rem;
   --size-medium: 2.5rem;
-  --size-xlarge: 4rem;
+  --size-xlarge: 3.5rem;
   --size-xxlarge: 6rem;
 
   /* weight */
@@ -854,7 +854,7 @@ video {
   /* desktop typography */
 
   h1 {
-    font-size: var(--size-medium);
+    font-size: var(--size-xlarge);
   }
 
   h5 {
