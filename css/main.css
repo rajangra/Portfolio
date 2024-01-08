@@ -699,7 +699,7 @@ video {
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
   /* height: 80vh; */
-  padding: 8rem 0 0;
+  padding: 8rem 0 3rem;
 }
 
 .footer a {
