@@ -1106,6 +1106,7 @@ ul {
   border-radius: 50px;
   color: var(--color-almost-black);
   z-index: 100;
+  margin-top: 1rem;
 }
 
 .container,
