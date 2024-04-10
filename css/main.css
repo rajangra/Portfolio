@@ -65,7 +65,7 @@
   --size-medium: 2.5rem;
   --size-xlarge: 3.5rem;
   --size-xxlarge: 6rem;
-  --size-fullwidthlarge: 8rem;
+  --size-fullwidthlarge: 6vw;
 
   /* weight */
   --weight-light: 300;
