@@ -24,8 +24,13 @@ function updateUI(selection) {
 }
 
 function saveSelection(selection) {
-  localStorage.setItem("weightUnits", selection);
-  updateUI(selection); // Update UI immediately when selection is saved
+  const savedSelection = localStorage.getItem("weightUnits");
+  if (!savedSelection) {
+    localStorage.setItem("weightUnits", "lbs");
+    updateUI("lbs");
+  } else {
+    updateUI(selection);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
