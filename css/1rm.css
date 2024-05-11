@@ -1,0 +1,35 @@
+.btn-group .btn {
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.input-group label {
+  color: white;
+}
+
+input[type="number"] {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 15px !important;
+}
+.btn-light {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  box-shadow: 0px 4px 50px 0px rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+  input[type="number"] {
+    padding: 21px;
+  }
+}
