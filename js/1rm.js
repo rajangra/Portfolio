@@ -24,19 +24,17 @@ function updateUI(selection) {
 }
 
 function saveSelection(selection) {
-  const savedSelection = localStorage.getItem("weightUnits");
-  if (!savedSelection) {
-    localStorage.setItem("weightUnits", "lbs");
-    updateUI("lbs");
-  } else {
-    updateUI(selection);
-  }
+  localStorage.setItem("weightUnits", selection);
+  updateUI(selection);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   const savedSelection = localStorage.getItem("weightUnits");
   if (savedSelection) {
     updateUI(savedSelection);
+  } else {
+    // Set a default selection if none is saved
+    saveSelection("lbs");
   }
 
   const lbsRadio = document.getElementById("lbs");
