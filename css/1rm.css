@@ -20,6 +20,12 @@ input[type="number"] {
   padding: 10px;
   border-radius: 15px !important;
 }
+
+/* Style the custom radio buttons when checked */
+input[type="radio"]:checked + label {
+  background-color: #222 !important;
+}
+
 .btn-light {
   width: 100%;
   background-color: white;
@@ -28,8 +34,17 @@ input[type="number"] {
   box-shadow: 0px 4px 50px 0px rgba(255, 255, 255, 0.5);
 }
 
+.full-width-table {
+  width: 100%;
+  margin: 50px 0;
+}
+
 @media (min-width: 768px) {
   input[type="number"] {
     padding: 21px;
+  }
+
+  .full-width-table {
+    width: 20%;
   }
 }
