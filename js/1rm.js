@@ -94,14 +94,14 @@ calculateButton.addEventListener("click", function () {
       "weightedOnly"
     ).innerText = `Added weight: ${extraWeight.toFixed(0)} ${selection}`;
 
-    setTimeout(() => {
-      confetti({
-        angle: randomInRange(55, 125),
-        spread: randomInRange(50, 70),
-        particleCount: randomInRange(50, 100),
-        origin: { x: 0.73, y: 0.7 },
-      });
-    }, 1000);
+    // setTimeout(() => {
+    //   confetti({
+    //     angle: randomInRange(55, 125),
+    //     spread: randomInRange(50, 70),
+    //     particleCount: randomInRange(50, 100),
+    //     origin: { x: 0.73, y: 0.7 },
+    //   });
+    // }, 1000);
 
     // Extract percentages
     const percentages = generatePercentages(oneRM);
