@@ -1270,3 +1270,22 @@ h3 {
     box-shadow: 0 0 10px yellow;
   }
 }
+
+/* logos  */
+
+.logo-row {
+  display: flex;
+  justify-content: center; /* Center align the logos horizontally */
+  align-items: center; /* Center align the logos vertically within their container */
+  flex-wrap: wrap; /* Ensure the logos wrap on smaller screens */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Fixed height for logos */
+}
+.logo-container img {
+  border: none;
+}
