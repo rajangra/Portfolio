@@ -1321,9 +1321,10 @@ h3 {
 /* Circle Animation */
 
 .circle-container {
-  position: relative;
+  z-index: -10;
+  position: absolute;
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden; /* Keeps circles within bounds */
 }
 
@@ -1346,14 +1347,14 @@ h3 {
 }
 
 .circle:nth-child(2) {
-  background-color: #9a80f9;
+  background-color: #6237ff;
   height: 190px;
   animation-delay: 0.2s, 3.7s;
   left: 10%;
 }
 
 .circle:nth-child(3) {
-  background-color: #c959dd;
+  background-color: #e030ff;
   animation-delay: 0.4s, 3.9s;
   left: 30%;
 }
