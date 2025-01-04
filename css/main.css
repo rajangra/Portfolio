@@ -6,7 +6,23 @@
 /* unbounded for headings  */
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Unbounded:wght@500&display=swap");
 
-/* Regular */
+/* PP Editorial Old Regular */
+@font-face {
+  font-family: "PPEditorialOld-Regular";
+  src: url("/fonts/PPEditorialOld-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* PP Editorial Old Italic */
+@font-face {
+  font-family: "PPEditorialOld-Italic";
+  src: url("/fonts/PPEditorialOld-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* PP  Neue Montreal Regular */
 @font-face {
   font-family: "PPNeueMontreal-Regular";
   src: url("/fonts/PPNeueMontreal-Regular.woff") format("woff");
@@ -91,8 +107,8 @@ html {
 }
 
 ::selection {
-  background-color: #7a93ff;
-  color: var(--color-almost-black);
+  color: #000;
+  background-color: #fab402;
 }
 
 /* global  */
@@ -175,7 +191,8 @@ body {
   cursor: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMCAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjExMTUgMTYuMDQ0NUwzLjU5MjI5IDIuMTU5NjVDMi44NTI5NiAxLjcyMzE4IDEuOTQzNTUgMi4zNTk5NiAyLjEwMDgzIDMuMjAzOThMNy4xMDQzIDMwLjA1MzdDNy4yNjk0NCAzMC45Mzk4IDguNDMwNTggMzEuMTcyMyA4LjkyNDE1IDMwLjQxOEwxNS4xNTEgMjAuOTAxOUMxNS4yOTE2IDIwLjY4NyAxNS41MDk1IDIwLjUzNDUgMTUuNzU5NSAyMC40NzU4TDI2LjgzMTQgMTcuODc5MkMyNy43MDkgMTcuNjczNCAyNy44ODc3IDE2LjUwMjggMjcuMTExNSAxNi4wNDQ1WiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzBFMEUxRSIgc3Ryb2tlLXdpZHRoPSI0Ii8+Cjwvc3ZnPgo=),
     auto;
   background-color: #000;
-  min-height: 100vh;
+  overflow-x: hidden;
+  min-height: 120vh;
 }
 
 /* navbar  */
@@ -320,6 +337,10 @@ nav a {
   margin-left: 1rem;
 }
 
+.hero-name {
+  font-size: 10vw;
+}
+
 .hero-text h1 {
   color: var(--color-not-white);
   font-size: var(--size-medium);
@@ -329,6 +350,11 @@ nav a {
   height: 60px;
   border-radius: 1000px;
   border: none;
+  transition: transform 0.3s ease-out; /* Smooth scaling effect */
+}
+
+.img-hero:hover {
+  transform: scale(1.5);
 }
 
 .grow {
@@ -347,7 +373,7 @@ h4,
 h5,
 h6 {
   color: var(--color-almost-black);
-  /* font-family: "Unbounded", sans-serif; */
+  font-family: "PPEditorialOld-Regular";
 }
 
 .underline-dotted {
@@ -1289,4 +1315,77 @@ h3 {
 }
 .logo-container img {
   border: none;
+}
+
+/* circle animation  */
+/* Circle Animation */
+
+.circle-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden; /* Keeps circles within bounds */
+}
+
+.circle {
+  position: absolute;
+  width: 40vw;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0;
+  top: -300px;
+  animation: drop-in 1.5s ease-out forwards, pulse 3s ease-in-out infinite;
+  animation-delay: 0s, 3.5s; /* Adds a 2-second delay after drop-in */
+}
+
+.circle:nth-child(1) {
+  background-color: #0096ff;
+  animation-delay: 0s, 3.5s; /* Sync delays for both animations */
+  left: -10%;
+}
+
+.circle:nth-child(2) {
+  background-color: #9a80f9;
+  animation-delay: 0.2s, 3.7s;
+  left: 10%;
+}
+
+.circle:nth-child(3) {
+  background-color: #c959dd;
+  animation-delay: 0.4s, 3.9s;
+  left: 30%;
+}
+
+.circle:nth-child(4) {
+  background-color: #ff2e54;
+  animation-delay: 0.6s, 4.1s;
+  left: 50%;
+}
+
+.circle:nth-child(5) {
+  background-color: #ff9004;
+  animation-delay: 0.8s, 4.3s;
+  left: 70%;
+}
+
+@keyframes drop-in {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateY(200px); /* Maintains dropped position */
+  }
+  50% {
+    transform: translateY(180px); /* Slight upward pulse */
+  }
 }
