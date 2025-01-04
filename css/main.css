@@ -1347,6 +1347,7 @@ h3 {
 
 .circle:nth-child(2) {
   background-color: #9a80f9;
+  height: 190px;
   animation-delay: 0.2s, 3.7s;
   left: 10%;
 }
@@ -1365,7 +1366,9 @@ h3 {
 
 .circle:nth-child(5) {
   background-color: #ff9004;
+  height: 110px;
   animation-delay: 0.8s, 4.3s;
+
   left: 70%;
 }
 
