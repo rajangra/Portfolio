@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const sections = document.querySelectorAll(".case-study-section");
+
+  sections.forEach((section) => {
+    gsap.to(section, {
+      scrollTrigger: {
+        trigger: section,
+        start: "center top",
+        end: "bottom bottom",
+        scrub: true,
+        snap: 0.75,
+        onEnter: () => gsap.to(section, { scale: 0.95, duration: 0.3 }),
+        onLeaveBack: () => gsap.to(section, { scale: 1, duration: 0.3 }),
+      },
+    });
+  });
+});
+
 // $(document).ready(function () {
 //   Fancybox.bind('[data-fancybox="gallery"]', {
 //     animated: true,
@@ -18,13 +38,6 @@
 // $(function () {
 //   $('[data-toggle="tooltip"]').tooltip();
 // });
-
-// set time of day on homepage
-let hour = new Date().getHours();
-const newHour =
-  (hour < 12 && "morning") || (hour < 18 && "afternoon") || "evening";
-
-// document.getElementById("timeOfDay").textContent = newHour;
 
 // toggle accordion chevron
 // $(".btn-accordion").click(function () {
