@@ -1,22 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+// document.addEventListener("DOMContentLoaded", () => {
+//   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = document.querySelectorAll(".case-study-section");
+//   const sections = document.querySelectorAll(".case-study-section");
 
-  sections.forEach((section) => {
-    gsap.to(section, {
-      scrollTrigger: {
-        trigger: section,
-        start: "center top",
-        end: "bottom bottom",
-        scrub: true,
-        snap: 0.75,
-        onEnter: () => gsap.to(section, { scale: 0.95, duration: 0.3 }),
-        onLeaveBack: () => gsap.to(section, { scale: 1, duration: 0.3 }),
-      },
-    });
-  });
-});
+//   sections.forEach((section) => {
+//     gsap.to(section, {
+//       scrollTrigger: {
+//         trigger: section,
+//         start: "bottom center",
+//         end: "bottom bottom",
+//         markers: false,
+//         onEnter: () => gsap.to(section, { scale: 0.95, duration: 0.3 }),
+//         onLeaveBack: () => gsap.to(section, { scale: 1, duration: 0.3 }),
+//       },
+//     });
+//   });
+// });
+
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
 // $(document).ready(function () {
 //   Fancybox.bind('[data-fancybox="gallery"]', {

@@ -59,109 +59,91 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <script src="js/navbar.js" defer></script> -->
+
+    <script src="js/navbar.js" defer></script>
   </head>
 
   <body>
-    <!-- gradient  -->
-    <div class="container-fluid overflow-hidden p-0">
-      <div class="circle-container">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-      </div>
-    </div>
-
-    <!-- main content  -->
-
+    <!-- main content -->
     <div class="container pt-10">
-      <div class="row">
-        <h1 class="hidden">Rajan Jangra.</h1>
+      <div class="row gx-5">
+        <h1 class="mb-5 hidden">Work.</h1>
 
-        <div class="image-container">
-          <img
-            src="https://res.cloudinary.com/rajangra/image/upload/f_auto,q_auto/rajan_head_shot_wmahl3.jpg"
-            alt="Rajan's picture"
-            class="img-fluid img-hero mb-3"
-          />
+        <div class="col-lg">
+          <a href="/waywo.html" class="case-study-link">
+            <div
+              class="case-study position-relative overflow-hidden p-0 p-lg-5"
+            >
+              <div class="case-study-content p-5 p-lg-0">
+                <h3 class="company-label opacity-75 mb-3">
+                  AI Stealth Startup
+                </h3>
+
+                <h2 class="">
+                  Designing <em>Waywo</em> from 0 → 1, and getting our first
+                  enterprise customer.
+                </h2>
+              </div>
+              <div
+                class="case-study-image-wrapper d-flex justify-content-center"
+              >
+                <img
+                  src="https://res.cloudinary.com/rajangra/image/upload/v1741211136/mobile_jyvylv.png"
+                  alt="waywo mockup"
+                  class="case-study-image img-fluid mt-0 mt-lg-5"
+                />
+              </div>
+            </div>
+          </a>
         </div>
 
-        <h2 class="my-4 hero-name" data-aos="fade-up" data-aos-delay="25">
-          Rajan Jangra
-        </h2>
-        <div class="col-lg-8">
-          <p class="mb-4" data-aos="fade-up" data-aos-delay="50">
-            An experienced product designer specializing in creating world-class
-            AI products.
-            <br />
-            Skilled in making valuable, simple, and delightful products to make
-            your business win — whether it's 0 <em>→</em> 1, or 1
-            <em>→</em> 100.
-          </p>
-          <a
-            data-aos="fade-up"
-            data-aos-delay="50"
-            class="btn btn-light"
-            href="work.html"
-            >See work <em>→</em></a
-          >
-        </div>
+        <!-- <div class="row">
+          <div class="col-lg mt-5 mb-5">
+            <a href="/subtasks.html" class="case-study-link">
+              <div class="case-study position-relative overflow-hidden">
+                <div class="case-study-content p-4">
+                  <h3 class="company-label opacity-75 mb-3">TELUS</h3>
+
+                  <h2 class="">
+                    Subtasks
+                  </h2>
+                </div>
+                <div
+                  class="case-study-image-wrapper d-flex justify-content-center"
+                >
+                  <img
+                    src=""
+                    alt="Case Study img"
+                    class="case-study-image img-fluid"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> -->
       </div>
     </div>
-
-    <div class="container mt-5">
-      <div class="row logo-row">
-        <div class="col-6 col-md-2 mb-3" data-aos="fade-up" data-aos-delay="50">
-          <img src="images/zenhub-logo-white.svg" alt="zenhub" />
-        </div>
-        <div
-          class="col-6 col-md-2 mb-3"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <img src="images/vidyard-logo-white.svg" alt="vidyard" />
-        </div>
-        <div
-          class="col-6 col-md-2 mb-3"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            class="logo-telus"
-            src="images/telus-logo-white.svg"
-            alt="telus"
-          />
-        </div>
-        <div
-          class="col-6 col-md-2 mb-3"
-          data-aos="fade-up"
-          data-aos-delay="250"
-        >
-          <img src="images/sunlife-logo-white.svg" alt="sunlife" />
-        </div>
-      </div>
-    </div>
-
-    <!-- 
-    <div
-      class="container my-5 container-video"
-      data-aos="fade-up"
-      data-aos-delay="150"
-    >
-      <div class="ratio ratio-16x9">
-        <video playsinline muted autoplay loop>
-          <source
-            src="https://res.cloudinary.com/rajangra/video/upload//f_auto,q_auto/v1706715519/reel_v2_urxwo3.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div> -->
 
     <!-- main content end  -->
+
+    <!-- custom js  -->
+    <script>
+      const caseStudyImages = document.querySelectorAll(".case-study-image");
+
+      caseStudyImages.forEach((image) => {
+        const caseStudyContent = image
+          .closest(".case-study")
+          .querySelector(".case-study-content");
+
+        image.addEventListener("mouseenter", () => {
+          caseStudyContent.classList.add("smoothhidden");
+        });
+
+        image.addEventListener("mouseleave", () => {
+          caseStudyContent.classList.remove("smoothhidden");
+        });
+      });
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -189,6 +171,7 @@
       AOS.init();
     </script>
 
+    <script src="js/main.js"></script>
     <!-- <script src="js/theme.js"></script> -->
 
     <!-- type it  -->
