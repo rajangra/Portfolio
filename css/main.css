@@ -79,7 +79,7 @@
   --size-body: 1.1rem;
   --size-normal: 1.25rem;
   --size-medium: 1.5rem;
-  --size-large: 2.4rem;
+  --size-large: 2rem;
   --size-xlarge: 3rem;
   --size-xxlarge: 4rem;
   --size-fullwidthlarge: 6vw;
@@ -183,6 +183,10 @@ nav a:hover {
   margin-top: 10rem;
 }
 
+.mb-10 {
+  margin-bottom: 10rem;
+}
+
 .pt-10 {
   padding-top: 10rem;
 }
@@ -220,6 +224,10 @@ nav a:hover {
   margin-bottom: 0.75em;
 }
 
+.ms-10 {
+  margin-left: 10rem;
+}
+
 body {
   font-family: "PPNeueMontreal-Medium", -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", sans-serif;
@@ -232,7 +240,6 @@ body {
   overflow-x: hidden;
   background-color: var(--color-almost-black);
   color: var(--color-still-gray);
-  min-height: 120vh;
 }
 
 em {
@@ -377,7 +384,7 @@ nav a {
 }
 
 .hero-name {
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 .hero-text h1 {
@@ -764,10 +771,13 @@ video {
   border: none;
 }
 
-/* accordion */
+.btn:hover {
+  background-color: white;
+}
 
-.btn {
-  font-size: inherit;
+.btn:active,
+.btn:focus {
+  outline: 5px solid var(--color-baby-blue) !important; /* Default focus ring */
 }
 
 .btn-dark {
@@ -965,6 +975,14 @@ video {
 /* media queries start */
 
 @media (min-width: 768px) {
+  .btn {
+    font-size: var(--size-medium);
+  }
+
+  .container-hero p {
+    font-size: var(--size-medium);
+  }
+
   nav {
     margin: 2rem 3rem;
   }
@@ -1171,10 +1189,6 @@ video {
     color: inherit;
     font-weight: 500;
   }
-
-  .container-hero {
-    padding: 20vh;
-  }
 }
 /* end of media query 1200px */
 
@@ -1251,6 +1265,13 @@ ul {
 
 .container-vh {
   height: 40vh;
+}
+
+.container-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .summary-list {
@@ -1384,7 +1405,7 @@ ul {
   border-radius: 50%;
   filter: blur(50px);
   opacity: 0;
-  top: -275px;
+  top: -325px;
   animation: drop-in 1.3s ease-out forwards, pulse 4s ease-out infinite;
   animation-delay: 0s, 2s; /* Adds a 2-second delay after drop-in */
 }
@@ -1530,12 +1551,16 @@ svg {
   margin: 10rem 0;
   padding: 5rem;
   top: 40px;
-  border-radius: 60px;
+  border-radius: 40px;
   background-color: #222;
   overflow: hidden;
 }
 
 @media (max-width: 767px) {
+  body {
+    min-height: 120vh;
+  }
+
   .case-study-section {
     padding: 0; /* Remove padding on mobile */
     background-color: transparent; /* Remove background on mobile */
@@ -1557,4 +1582,15 @@ svg {
 
 .theme-switcher option {
   background-color: var(--bg-color);
+}
+
+.work h3 {
+  font-size: var(--size-large);
+}
+
+.past-work-card {
+  background-color: #151515;
+  padding: 1rem;
+  border-radius: 40px;
+  min-height: 700px;
 }
