@@ -77,7 +77,7 @@
 :root {
   /* Size */
   --size-body: 1.1rem;
-  --size-normal: 1.25rem;
+  --size-normal: 1.2rem;
   --size-medium: 1.5rem;
   --size-large: 2rem;
   --size-xlarge: 3rem;
@@ -384,7 +384,7 @@ nav a {
 }
 
 .hero-name {
-  font-size: 6vw;
+  font-size: var(--size-xxlarge);
 }
 
 .hero-text h1 {
@@ -975,12 +975,9 @@ video {
 /* media queries start */
 
 @media (min-width: 768px) {
+  .container-hero p,
   .btn {
-    font-size: var(--size-medium);
-  }
-
-  .container-hero p {
-    font-size: var(--size-medium);
+    font-size: var(--size-normal);
   }
 
   nav {
@@ -1495,11 +1492,6 @@ svg {
   transition: all 0.3s ease;
 }
 
-.case-study-cta {
-  /* background-color: var(--color-blue-azure) !important; */
-  background: linear-gradient(180deg, rgb(0 0 0) 0%, rgba(0, 212, 255, 1) 100%);
-}
-
 .bg-neutral-gradient {
   background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(46, 46, 46) 100%);
 }
@@ -1556,6 +1548,12 @@ svg {
   overflow: hidden;
 }
 
+.case-study-cta {
+  /* background-color: var(--color-blue-azure) !important; */
+  background: linear-gradient(180deg, rgb(0 0 0) 0%, rgba(0, 212, 255, 1) 100%);
+  min-height: 60vh;
+}
+
 @media (max-width: 767px) {
   body {
     min-height: 120vh;
@@ -1571,6 +1569,10 @@ svg {
     border-radius: 60px;
     padding-top: 5rem;
     text-align: center;
+    min-height: 60vh;
+  }
+  .case-study-cta h2 {
+    font-size: var(--size-large);
   }
 }
 
