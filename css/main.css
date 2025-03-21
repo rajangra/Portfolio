@@ -777,6 +777,8 @@ video {
 
 .btn {
   border-radius: 9999px;
+  border: none;
+  padding: 0.5rem 1.5rem;
 }
 
 .btn-primary:hover {
@@ -799,7 +801,6 @@ video {
 .btn-primary {
   background-color: white;
   color: var(--color-almost-black);
-  padding: 0.5rem 1.5rem;
   border-radius: 90px;
 }
 
