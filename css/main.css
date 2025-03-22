@@ -1529,7 +1529,7 @@ svg {
 }
 
 .case-study-cta a {
-  border: 1px solid;
+  /* border: 1px solid; */
   border-radius: 999px;
   padding: 1rem 1.66rem;
 }
@@ -1537,7 +1537,7 @@ svg {
 .case-study-cta a:hover {
   background-color: var(--color-off-white);
   color: var(--color-almost-black);
-  border: 1px solid var(--color-off-white);
+  /* border: 1px solid var(--color-off-white); */
 }
 
 .case-study-link:hover .case-study {
