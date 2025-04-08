@@ -481,7 +481,7 @@ h2 {
 }
 
 h3 {
-  font-size: var(--size-normal);
+  font-size: var(--size-medium);
 }
 
 .section-expertise {
@@ -778,7 +778,7 @@ video {
 .btn {
   border-radius: 9999px;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 0.25rem 1rem;
 }
 
 .btn-primary:hover {
@@ -804,7 +804,7 @@ video {
   border-radius: 90px;
 }
 
-.btn:first-child:active,
+.btn:active,
 .btn:focus-visible {
   background-color: var(--color-off-white);
   color: var(--color-almost-black);
@@ -1430,7 +1430,7 @@ ul {
   border-radius: 50%;
   filter: blur(50px);
   opacity: 0;
-  top: -325px;
+  top: -355px;
   animation: drop-in 1.3s ease-out forwards, pulse 4s ease-out infinite;
   animation-delay: 0s, 2s; /* Adds a 2-second delay after drop-in */
 }
@@ -1457,7 +1457,7 @@ ul {
 }
 
 .circle:nth-child(4) {
-  background-color: #ff2f2f;
+  background-color: #ff2ff8;
   height: 150px;
   animation-delay: 0.2s, 2.1s;
   left: 55%;
@@ -1623,4 +1623,100 @@ svg {
   padding: 1rem;
   border-radius: 40px;
   min-height: 700px;
+}
+
+.container-partner-hero img {
+  /* height: 250px; */
+}
+
+.section-services .s-card {
+  background-color: #111;
+  border-radius: 33px;
+}
+
+.section-services p {
+  margin-top: 0.75rem;
+}
+
+.section-services img {
+  height: 230px;
+  background: #222;
+  border: none;
+}
+
+.partner-cta {
+  background-color: #111;
+  border-radius: 33px;
+  padding: 6rem 2rem;
+}
+
+.section-examples {
+  margin: 10rem 0;
+}
+
+.section-examples img {
+  transition: all 0.4s ease-out;
+}
+
+/* before after image wrapper for partner work  */
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.25s ease-out;
+}
+
+.before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.after {
+  opacity: 1;
+}
+
+.image-wrapper:hover .before {
+  opacity: 1;
+}
+
+.image-wrapper:hover .after {
+  opacity: 0;
+}
+
+.label {
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  /* font-size: 14px; */
+  border-radius: 12px;
+}
+
+.before-label {
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.after-label {
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .before-label {
+  opacity: 1;
+}
+
+.image-wrapper:hover .after-label {
+  opacity: 0;
 }
