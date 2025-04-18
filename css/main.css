@@ -778,7 +778,7 @@ video {
 .btn {
   border-radius: 9999px;
   border: none;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .btn-primary:hover {
