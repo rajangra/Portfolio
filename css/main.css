@@ -76,7 +76,7 @@
 
 :root {
   /* Size */
-  --size-body: 1.1rem;
+  --size-body: 1.2rem;
   --size-normal: 1.2rem;
   --size-medium: 1.5rem;
   --size-large: 2rem;
@@ -100,7 +100,8 @@
   --color-yellow: #ffe059;
   --color-off-white: #f5f5f7;
   --color-proper-gray: #b6b7bc;
-  --color-still-gray: #ddd;
+  --color-still-gray: #bbb;
+  --color-gray-blue: #a8a8a8;
   --color-blue-azure: #1681ed;
   --color-vivid-skyblue: #00d4ff;
   --color-nice-purple: #3a16ed; /* technically called electric indigo */
@@ -124,7 +125,7 @@
 
 ::selection {
   color: #000;
-  background-color: #fab402;
+  background-color: #fff42c;
 }
 
 /* global  */
@@ -560,6 +561,10 @@ abbr[title] {
   font-weight: 400;
 }
 
+.text-dark-secondary {
+  color: var(--color-gray-blue);
+}
+
 /* list item / li */
 
 .footer h2 {
@@ -576,7 +581,7 @@ abbr[title] {
 }
 
 .p-large {
-  font-size: var(--size-normal);
+  font-size: var(--size-large);
 }
 
 .container-cta a {
@@ -779,7 +784,10 @@ video {
   border-radius: 9999px;
   border: none;
   padding: 0.5rem 1rem;
+    transition: all 0.3s ease-out;
 }
+
+
 
 .btn-primary:hover {
   background-color: var(--color-proper-gray);
@@ -1051,6 +1059,15 @@ video {
   .highlights-section p {
     margin: 0.5rem 0;
     font-size: var(--size-body);
+  }
+
+  .highlights-section .highlight {
+    transition: all 0.25s ease-out;
+  }
+
+  .highlights-section .highlight:hover {
+    /* filter: drop-shadow(0 0 25px white) brightness(1.2); */
+    color: white;
   }
 
   /* desktop cover photo */
@@ -1425,49 +1442,49 @@ ul {
 
 .circle {
   position: absolute;
-  width: 30vw;
+  width: 50vw;
   height: 10px;
   border-radius: 50%;
   filter: blur(50px);
   opacity: 0;
-  top: -355px;
-  animation: drop-in 1.3s ease-out forwards, pulse 4s ease-out infinite;
+  top: -365px;
+  animation: drop-in 1.5s ease-out forwards, pulse 4s ease-out infinite;
   animation-delay: 0s, 2s; /* Adds a 2-second delay after drop-in */
 }
 
 .circle:nth-child(1) {
   background-color: #27acff;
-  animation-delay: 0.25s, 1.7s;
-  height: 150px;
+  animation-delay: 0.25s, 1.9s;
+  height: 170px;
   left: 0%;
 }
 
 .circle:nth-child(2) {
   background-color: #bf6df6;
-  height: 150px;
+  height: 180px;
   animation-delay: 0.2s, 1.5s;
   left: 10%;
 }
 
 .circle:nth-child(3) {
   background-color: #e337ff;
-  height: 150px;
-  animation-delay: 0.2s, 2.9s;
-  left: 35%;
+  height: 190px;
+  animation-delay: 0.1s, 2s;
+  left: 20%;
 }
 
 .circle:nth-child(4) {
   background-color: #ff2ff8;
-  height: 150px;
-  animation-delay: 0.2s, 2.1s;
-  left: 55%;
+  height: 180px;
+  animation-delay: 0.2s, 1.5s;
+  left: 30%;
 }
 
 .circle:nth-child(5) {
   background-color: #ff801f;
   animation-delay: 0.25s, 1.9s;
-  height: 150px;
-  left: 70%;
+  height: 170px;
+  left: 60%;
 }
 
 @keyframes drop-in {
@@ -1527,18 +1544,7 @@ svg {
 .case-study-cta h2 {
   font-size: var(--size-xxlarge);
 }
-
-.case-study-cta a:hover {
-  background-color: var(--color-off-white);
-  color: var(--color-almost-black);
-  /* border: 1px solid var(--color-off-white); */
-}
-
-.case-study-link:hover .case-study {
-  /* transform: scale(1.02); */
-  /* box-shadow: 6px 6px 60px 0px rgb(255 255 255 / 10%); */
-}
-
+ 
 .case-study-link:hover {
   opacity: 1;
 }
@@ -1713,4 +1719,97 @@ svg {
 
 .image-wrapper:hover .after-label {
   opacity: 0;
+}
+
+
+/* Bootstrap Modal  */
+
+.btn-dive-deeper{
+  background-color: #4b4b4bdf;
+  color: rgba(255, 255, 255, 1);
+  opacity: .9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 20px;
+}
+
+.btn-dive-deeper:hover, .btn-dive-deeper:active, .btn-dive-deeper:focus{
+background-color: #4b4b4bdf !important;
+color: white;
+opacity: 1;
+}
+
+.btn-dive-deeper svg {
+  transition: transform 0.3s ease; /* smooth rotation */
+}
+
+.btn-dive-deeper:hover svg {
+  transform: rotate(90deg); /* rotate 90 degrees on hover */
+}
+
+
+ .btn-modal-close{
+  background: none;
+  border: none;
+  opacity: .8;
+ }
+
+ .btn-modal-close:hover{
+  opacity: 1;
+ }
+
+/* Start with modal off-screen at bottom */
+.modal.fade .modal-dialog {
+  transform: translateY(50%);
+  transition: all 0.6s ease;
+}
+
+/* Animate it into view */
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+
+/* Make modal take full viewport height */
+.modal-dialog {
+  min-height: 100vh; 
+}
+
+.modal-content {
+  flex: 1;                 
+  min-height: 100vh;      
+  background-color: #000;
+  border-radius: 28px;;
+}
+
+.modal-header, .modal-footer{
+  border: none;
+}
+ 
+.modal-open .modal-backdrop {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1 !important;
+}
+
+
+.floating-preview {
+position: fixed;
+width: 150px;
+height: auto;
+pointer-events: none;
+opacity: 0;
+ border: none;
+transition: opacity 0.2s;
+transform: translate(-50%, -100%);
+margin-top: -20px;
+/* background: #333; */
+z-index: 1000;
+    }
+
+ @media (min-width: 1400px) {
+  .modal-xl {
+    max-width: 1400px;
+  }
 }
