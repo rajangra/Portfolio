@@ -267,6 +267,10 @@
 
     <!-- main content end  -->
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Create a footer element if it doesn't exist
@@ -320,9 +324,6 @@
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 
     <script type="module">
-      import { gsap } from "https://cdn.skypack.dev/gsap";
-      import { ScrambleTextPlugin } from "https://cdn.skypack.dev/gsap-trial/ScrambleTextPlugin";
-
       gsap.registerPlugin(ScrambleTextPlugin);
 
       const scrambleElement = document.getElementById("scramble-text");
