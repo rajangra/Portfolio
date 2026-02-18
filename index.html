@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -77,20 +77,38 @@
         <h1 class="hidden">Rajan Jangra.</h1>
 
         <div class="col container-hero">
-          <div class="image-container" data-aos="fade-up" data-aos-delay="25">
+          <div id="hero-image-container" class="image-container">
             <img
               src="https://res.cloudinary.com/rajangra/image/upload/f_auto,q_auto/rajan_head_shot_wmahl3.jpg"
               alt="Rajan's picture"
               class="img-fluid img-hero mb-3"
             />
           </div>
-          <p class="m-0 mb-4 text-white" data-aos="fade-up" data-aos-delay="50">
-            Hi, I’m Rajan, an experienced product designer. <br />
-            <span class="text-dark-secondary">
-              I help companies design software that is intuitive, modern, and a
-              delight to use.
-            </span>
-          </p>
+          <div class="mt-0 mb-0 d-flex flex-column align-items-start">
+            <p
+              id="hero-name"
+              class="m-0 text-white"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              Rajan Jangra
+            </p>
+
+            <p
+              id="scramble-text"
+              class="m-0 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              Product Designer
+            </p>
+          </div>
+
+          <h1 class="mb-5 h1-hero" data-aos="fade-up" data-aos-delay="50">
+            I help design & ship
+            <em id="shimmer">quality</em> software people love.
+          </h1>
+
           <div data-aos="fade-up" data-aos-delay="100">
             <a class="btn btn-primary me-2" href="work.html">See work</a>
             <a class="btn btn-secondary" href="mailto:rajanixd@gmail.com"
@@ -100,7 +118,7 @@
 
           <!-- higlights section -->
           <div
-            class="highlights-section d-flex text-center my-5rem gap-5"
+            class="highlights-section d-flex mt-6 gap-5"
             data-aos="fade-up"
             data-aos-delay="150"
           >
@@ -129,7 +147,7 @@
                   />
                 </svg>
               </i>
-              <p class="opacity-75">7+ years experience</p>
+              <p class=" ">8+ years experience</p>
             </div>
             <div class="highlight">
               <i>
@@ -170,7 +188,7 @@
                   />
                 </svg>
               </i>
-              <p class="opacity-75">Results driven</p>
+              <p class=" ">Results driven</p>
             </div>
             <div class="highlight">
               <i>
@@ -211,7 +229,7 @@
                   />
                 </svg>
               </i>
-              <p class="opacity-75">Good vibes only</p>
+              <p class=" ">Enjoys the craft</p>
             </div>
           </div>
         </div>
@@ -255,7 +273,7 @@
         let footer = document.querySelector("footer");
 
         // const currentYear = new Date().getFullYear();
-        footer.innerHTML = `<p class="opacity-75">Rajan Jangra</p>`;
+        footer.innerHTML = `<p class="text-dark-secondary">Rajan Jangra</p>`;
       });
     </script>
 
@@ -300,5 +318,69 @@
 
     <!-- Lottie  -->
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+
+    <script type="module">
+      import { gsap } from "https://cdn.skypack.dev/gsap";
+      import { ScrambleTextPlugin } from "https://cdn.skypack.dev/gsap-trial/ScrambleTextPlugin";
+
+      gsap.registerPlugin(ScrambleTextPlugin);
+
+      const scrambleElement = document.getElementById("scramble-text");
+      const heroName = document.getElementById("hero-name");
+      const heroImageContainer = document.getElementById(
+        "hero-image-container",
+      );
+      const qualityText = document.getElementById("shimmer");
+
+      if (scrambleElement) {
+        scrambleElement.addEventListener("mouseenter", () => {
+          gsap.to(scrambleElement, {
+            duration: 1,
+            scrambleText: {
+              text: "Product Builder",
+              chars: "<&!§8(x",
+              revealDelay: 0.1,
+              speed: 0.3,
+            },
+          });
+        });
+
+        scrambleElement.addEventListener("mouseleave", () => {
+          gsap.to(scrambleElement, {
+            duration: 1,
+            scrambleText: {
+              text: "Product Designer",
+              chars: "<&!§8(x",
+              revealDelay: 0.1,
+              speed: 0.3,
+            },
+          });
+        });
+      }
+
+      if (heroName && heroImageContainer) {
+        heroName.addEventListener("mouseenter", () => {
+          gsap.to(heroImageContainer, { opacity: 1, duration: 0.1 });
+        });
+
+        heroName.addEventListener("mouseleave", () => {
+          gsap.to(heroImageContainer, { opacity: 0, duration: 0.1 });
+        });
+
+        heroName.addEventListener("mousemove", (e) => {
+          heroImageContainer.style.left = e.clientX + "px";
+          heroImageContainer.style.top = e.clientY + "px";
+        });
+      }
+
+      if (qualityText) {
+        qualityText.addEventListener("mouseenter", () => {
+          qualityText.classList.add("shimmer");
+        });
+        qualityText.addEventListener("mouseleave", () => {
+          qualityText.classList.remove("shimmer");
+        });
+      }
+    </script>
   </body>
 </html>
