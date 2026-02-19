@@ -111,6 +111,14 @@
   --font-serif: "PPEditorialOld-Regular", serif;
 }
 
+.text-sans {
+  font-family: var(--font-sans);
+}
+
+.text-serif {
+  font-family: var(--font-serif);
+}
+
 /* Dark mode theme */
 /* [data-theme="dark"] {
   --bg-color: var(--color-almost-black);
@@ -238,6 +246,7 @@ nav a:hover {
 }
 
 body {
+  min-height: 110vh;
   font-family:
     "PPNeueMontreal-Medium",
     -apple-system,
@@ -987,7 +996,7 @@ video {
   /* font-size: 2rem; */
   border-radius: 99px;
   padding: 0.5rem 0.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   /* max-width: 100%; */
   /* background-color: white; */
 }
