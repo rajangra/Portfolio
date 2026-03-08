@@ -76,7 +76,7 @@
 
 :root {
   /* Size */
-  --size-body: 1.33rem;
+  --size-body: 1.1rem;
   --size-normal: 1.33rem;
   --size-medium: 1.5rem;
   --size-large: 2rem;
@@ -137,7 +137,7 @@
 
 ::selection {
   color: #000;
-  background-color: #fff42c;
+  background-color: #cbcbcb;
 }
 
 /* global  */
@@ -248,7 +248,7 @@ nav a:hover {
 body {
   min-height: 110vh;
   font-family:
-    "PPNeueMontreal-Medium",
+    "PPNeueMontreal-Regular",
     -apple-system,
     BlinkMacSystemFont,
     "Helvetica Neue",
@@ -407,7 +407,7 @@ nav a {
 }
 
 .hero-name {
-  font-size: var(--size-xxlarge);
+  font-size: var(--size-xlarge);
 }
 
 .hero-text h1 {
@@ -422,6 +422,12 @@ nav a {
   transition: transform 0.3s ease-out; /* Smooth scaling effect */
 }
 
+.hover-image-trigger {
+  /* background-color: #84848456; */
+  /* color: #bbb; */
+  border-bottom: 1px dashed #888;
+}
+
 #hero-image-container {
   position: fixed;
   width: 100px;
@@ -434,6 +440,29 @@ nav a {
   z-index: 1000;
   left: 0;
   top: 0;
+}
+
+.hover-image-container {
+  position: fixed;
+  width: 200px; /* Default width */
+  height: auto;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1000;
+  transform: translate(-50%, -100%);
+  margin-top: -10px; /* Small offset from cursor */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
+  left: 0;
+  top: 0;
+}
+
+.hover-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .img-hero:hover {
@@ -488,6 +517,7 @@ h1 {
   font-family: var(--font-sans);
   letter-spacing: -0.2px;
   line-height: 1.1;
+  font-size: var(--size-xxlarge);
 }
 
 .h1-small {
@@ -1156,7 +1186,7 @@ video {
   }
 
   h1 {
-    font-size: var(--size-xxlarge);
+    font-size: var(--size-xlarge);
   }
 
   h5 {
@@ -1613,7 +1643,7 @@ svg {
 }
 
 .case-study-cta h2 {
-  font-size: var(--size-xxlarge);
+  font-size: var(--size-xlarge);
 }
 
 .case-study-link:hover {

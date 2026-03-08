@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Jonas Club Software Case Study." />
+    <meta name="author" content="Rajan Jangra" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Jonas Club Software | Rajan Jangra</title>
+
+    <!-- fav icon  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="zoom-effect/zoom.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Flip.min.js"></script>
+
+    <script src="js/navbar.js" defer></script>
+    <script src="zoom-effect/zoom.js" defer></script>
+    <script src="js/hover-image.js" defer></script>
+    <style>
+      @media (min-width: 992px) {
+        .sticky-lg-top {
+          top: 25% !important;
+          height: fit-content;
+        }
+      }
+      .video-placeholder {
+        width: 100%;
+        min-height: 500px;
+        background-color: #1a1a1a;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #888;
+        border: 0px solid #444;
+        margin-bottom: 2rem;
+      }
+      .step-text-block {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+      }
+      .video-stack {
+        position: relative;
+        width: 100%;
+        min-height: 0;
+      }
+      .video-stack-item {
+        width: 100%;
+        margin-bottom: 2rem;
+        cursor: zoom-in;
+      }
+
+      @media (max-width: 991px) {
+        .step-text-block p:last-of-type {
+          margin-bottom: 3rem;
+        }
+      }
+      @media (min-width: 992px) {
+        .step-text-block {
+          padding-top: 30vh;
+          padding-bottom: 30vh;
+        }
+        .video-stack {
+          min-height: 600px;
+        }
+        .video-stack-item {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.2s;
+          pointer-events: none;
+          margin-bottom: 0;
+        }
+        .video-stack-item.active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+      .before-after-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 30px;
+      }
+      .before-after-wrapper .after-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+        position: relative;
+        z-index: 1;
+      }
+      .before-after-wrapper .before-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .before-after-wrapper:hover .before-img {
+        opacity: 1;
+      }
+      .research-grid,
+      .testing-grid,
+      .outcomes-grid,
+      .build-grid {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9; /* Adjusted from 16/10 to crop more top/bottom */
+        overflow: hidden;
+        border-radius: 30px;
+      }
+
+      .design-grid {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 30px;
+      }
+
+      .research-grid img,
+      .testing-grid img,
+      .outcomes-grid img,
+      .design-grid img,
+      .build-grid img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+      }
+
+      .design-grid img {
+        position: relative;
+        object-fit: cover;
+      }
+
+      .design-grid img:not(.active) {
+        position: absolute;
+      }
+
+      .outcomes-grid img.active,
+      .research-grid img.active,
+      .testing-grid img.active,
+      .design-grid img.active,
+      .build-grid img.active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row justify-content-center" id="top">
+        <div class="col-lg-10">
+          <h1 class="text-center py-10">
+            Building a <em>modern</em> Dining Reservations & Table Management
+            System to reclaim the #1 choice for club software.
+          </h1>
+        </div>
+
+        <div class="col-9" data-aos="fade-up" data-aos-delay="25">
+          <div class="before-after-wrapper">
+            <img
+              src="https://res.cloudinary.com/rajangra/image/upload/v1771692911/before_floor_plan_bde6xu.png"
+              alt="before"
+              class="before-img img-fluid"
+            />
+            <img
+              src="https://res.cloudinary.com/rajangra/image/upload/f_auto,q_auto/v1770598142/Host_view_-_floor_plan_dark_mode_-landscape_sguf5m.png"
+              alt="after"
+              class="after-img img-fluid"
+            />
+          </div>
+          <p class="d-flex justify-content-center mt-2 fs-6">
+            Mockup of the redesigned floor plan. Hover to see before.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Overview -->
+      <section id="overview">
+        <!-- Context -->
+        <div class="row justify-content-center align-items-center min-vh-100">
+          <div class="col-lg-5 split" data-aos="fade-up">
+            <h2>Context</h2>
+            <p>
+              Jonas Club Software provides software for private clubs of all
+              types, including golf, country, city, and yacht clubs. They have
+              been a global leader for over 30 years, serving 2300+ clubs in 20
+              countries.
+            </p>
+
+            <p>
+              But over the last decade, the numbers began to tell a different
+              story.
+            </p>
+            <p>
+              Since 2015, Jonas Club Software has lost 50 to 100 customers every
+              year.
+              <br />
+              <span
+                class="hover-image-trigger"
+                data-image-url="https://res.cloudinary.com/rajangra/image/upload/v1771698686/simpson-gone_evu1yz.gif"
+                data-image-width="300px"
+                ><em>Millions of dollars</em> in annual recurring revenue,
+                gone.</span
+              >
+            </p>
+            <p>
+              Why? The new generation of users didn't want to use software that
+              felt like it was stuck in the 1990s. This led to a high employee
+              turnover, which made clubs leave Jonas Club Software for the
+              competition.
+            </p>
+
+            <p>
+              Our goal was clear: Build a <em>modern, best-in-class</em> Dining
+              Reservations & Table Management System, and reclaim the #1 choice
+              for club software.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-9">
+            <img
+              class="img-fluid"
+              src="https://res.cloudinary.com/rajangra/image/upload/v1771694985/Screenshot_2026-02-21_at_12.28.29_PM_ejaqvn.png"
+              alt=""
+            />
+            <p class="d-flex justify-content-center mt-2 fs-6">
+              Jonas Club Software's About Page
+            </p>
+          </div>
+        </div>
+
+        <!-- Role & Responsibilities -->
+        <div class="row justify-content-center align-items-center min-vh-100">
+          <div class="col-lg-5 split" data-aos="fade-up">
+            <h2>My Role & Team</h2>
+            <p>
+              As the first designer at a 30+ year old company, I had the
+              opportunity to rethink how product and UX operated internally.
+            </p>
+            <p>
+              I introduced the design and research process, and contributed
+              across roles including product management, research, design, and
+              frontend development. I aligned stakeholders around a clear
+              product direction and built the design system and coded components
+              that now serve as the foundation for future products across the
+              company.
+            </p>
+
+            <p>Team:</p>
+
+            <ul>
+              <li>Me (Product Designer & Design Engineer)</li>
+              <li>Bohdan (Backend Developer)</li>
+              <li>Matt (Client Advocate, ex-club GM)</li>
+            </ul>
+            <p></p>
+
+            <p>Timeline: Sep 2025 - Feb 2026</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planning to Build Sections -->
+      <section id="process-steps" class="mt-15 mb-15">
+        <div class="row justify-content-between">
+          <!-- Left: Scrolling Text Blocks -->
+          <div class="col-lg-4">
+            <div class="step-text-block split" id="step1" data-aos="fade-up">
+              <p><em>1. Planning</em></p>
+              <h2>
+                The project was ambiguous, so I started with a project plan.
+              </h2>
+
+              <p>
+                I find this helpful to communicate how we’ll move from start to
+                finish, keeping stakeholders informed and aligned throughout.
+              </p>
+            </div>
+            <div class="step-text-block split" id="step2" data-aos="fade-up">
+              <p><em>2. Discovery & Research</em></p>
+              <h2>Helping the team make better decisions.</h2>
+
+              <p>
+                Since there was no previous research or design practice at Jonas
+                Club Software, I knew introducing this was critical to the
+                success of the project. For years, project managers relied on
+                personal and anecdotal opinions to build software. But I wanted
+                to be user-centric from the start.
+              </p>
+              <p>
+                I started with secondary research to better understand users'
+                needs, their goals, and competitors like OpenTable and Toast.
+              </p>
+              <p>This formed the foundation for the rest of the project.</p>
+            </div>
+            <div class="step-text-block split" id="step3" data-aos="fade-up">
+              <p><em>2b. Primary Research</em></p>
+              <h2>
+                Getting close to the users with interviews & contextual
+                inquiries.
+              </h2>
+
+              <p>
+                Secondary research was the starting point, but getting evidence
+                from real users was going to guide prioritization and future
+                design decisions.
+              </p>
+              <p>
+                We had a number of key insights which shaped the rest of the
+                process:
+              </p>
+              <ul>
+                <li>
+                  While the existing system had a ton of features, it was
+                  incredibly difficult to set up and use.
+                </li>
+                <li>
+                  The product had critical features missing like Table
+                  Management, which was essential to running restaurant F&B
+                  operations.
+                </li>
+                <li>
+                  Lack of support for iPad and mobile meant the staff was stuck
+                  using a fixed-location computer which was extremely
+                  inefficient and inflexible.
+                </li>
+              </ul>
+            </div>
+            <div class="step-text-block split" id="step4" data-aos="fade-up">
+              <p><em>3. Prioritization</em></p>
+              <h2>
+                Users wanted all the features, but ruthless prioritization is
+                what would bring revenue.
+              </h2>
+              <p>
+                The users wanted a <em>lot</em> of new functionality that Jonas
+                Club Software did not currently support. There was no way we
+                could implement everything with the limited resources, so I
+                helped the team prioritize high-impact areas that would help us
+                win new clients once we launch the product.
+              </p>
+              <p>
+                Here I initially leveraged AI to create requirements, which were
+                further refined from real research insights. This helped us plan
+                for long-term vision, roadmaps, and breaking down into smaller
+                projects and milestones (MVP, M2, etc)
+              </p>
+            </div>
+            <div class="step-text-block split" id="step5" data-aos="fade-up">
+              <p><em>4. Design</em></p>
+              <h2>
+                Designing the core Dining Reservations & Table Management
+                experience for Clubs.
+              </h2>
+              <p>
+                Note: This was before AI prototyping became common, which has
+                since changed my workflow significantly.
+              </p>
+              <p>
+                With the MVP requirements clear, I explored different ways to
+                design the experience in low-fidelity while building the design
+                system at the same time.
+              </p>
+              <p>
+                As the flows were refined and the design system took shape, I
+                turned wireframes into mockups and prototypes for usability
+                testing.
+              </p>
+              <p>
+                I shared progress in daily standups and weekly meetings to get
+                feedback from the team.
+              </p>
+            </div>
+            <div
+              class="step-text-block split"
+              id="step-walkthrough"
+              data-aos="fade-up"
+            >
+              <p><em>4b. Prototype</em></p>
+              <h2>
+                Preparing a high-fidelity prototype for usability testing.
+              </h2>
+              <p>
+                As a team, we knew the host experience was the biggest risk. If
+                we got this wrong, nothing else would matter. Getting it right
+                was key to setting our product apart and winning.
+              </p>
+              <p>
+                From floor plans and table management to a smooth booking flow,
+                here is a preview of the final Jonas Dining Reservations system.
+              </p>
+            </div>
+            <div class="step-text-block split" id="step6" data-aos="fade-up">
+              <p><em>5. Usability Testing</em></p>
+              <h2>Evaluating our assumptions with real users.</h2>
+              <p>
+                With the prototype ready, I created a usability test plan to
+                guide the sessions. We tested it with over 12 clubs and several
+                internal stakeholders.
+              </p>
+
+              <p>
+                Feedback from club staff helped us refine the details before
+                building in code. Because of the early research, no major
+                changes were needed.
+              </p>
+              <p>With that, we were ready to build!</p>
+            </div>
+            <div class="step-text-block split" id="step7" data-aos="fade-up">
+              <p><em>6. Build</em></p>
+              <h2>Collaborating with the backend developer.</h2>
+
+              <p>
+                While we looked for a frontend developer in the team, I was keen
+                to take on the task of building the design system in code.
+              </p>
+              <p>
+                As the project progressed, we still didn't have a frontend
+                developer, so I put my developer hat on, and leveraged AI to
+                build the frontend of the app.
+              </p>
+              <p>
+                One challenge was that the staff wanted the system to work as a
+                native iPad app, and also work on desktop and mobile.
+              </p>
+              <p>
+                I had the idea to build the app as a Progressive Web App (PWA)
+                which allowed the system to run like a native app on iPad, but
+                also responsive on other devices. This saved us a lot of time
+                and effort, and positioned our product as one that works across
+                all platforms.
+              </p>
+            </div>
+            <div class="step-text-block split" id="step8" data-aos="fade-up">
+              <p><em>7. Outcomes</em></p>
+              <h2>The big reveal at CMAA 2026.</h2>
+
+              <p>
+                My favorite part of the process came at the annual CMAA show,
+                the world’s biggest club event. One of our team members demoed
+                the system to over 120 clubs that signed up for it.
+              </p>
+              <p>
+                To summarize, they all said the same thing:
+                <em
+                  class="hover-image-trigger"
+                  data-image-url="https://res.cloudinary.com/rajangra/image/upload/v1772897212/shut-up-and-take-my-money_jgchrd.gif"
+                  data-image-width="400px"
+                >
+                  “When can we have it?”</em
+                >
+              </p>
+
+              <p>
+                With an average ARR of $25,000 per club, that meant a potential
+                $3.1 million in new revenue in the first year alone.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Sticky Video Column -->
+          <div class="col-lg-7 sticky-lg-top">
+            <div class="video-stack">
+              <!-- Video 1: Planning -->
+              <div class="video-stack-item" id="media-step1">
+                <video class="w-100" autoplay loop muted playsinline>
+                  <source
+                    src="https://res.cloudinary.com/rajangra/video/upload/f_auto,q_auto/v1770601651/project_planning_cc5hhv.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- Video 2: Discovery -->
+              <div class="video-stack-item" id="media-step2">
+                <video class="w-100" autoplay loop muted playsinline>
+                  <source
+                    src="https://res.cloudinary.com/rajangra/video/upload/f_auto,q_auto/v1770599337/jonas_discovery_research_eeacdp.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <!-- Video 3: Discovery continued -->
+              <div class="video-stack-item" id="media-step3">
+                <div class="research-grid">
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771728235/user_research_sc_3_phts3y.png"
+                    alt="User interview 1"
+                    class="active img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771728234/user_research_sc_7_rjf4mo.png"
+                    alt="User interview 2"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771728233/user_research_sc_1_apfmyg.png"
+                    alt="User interview 3"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771728232/user_research_sc_6_jmcbrz.png"
+                    alt="User interview 4"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771729752/IMG_5402_yi5fmc.jpg"
+                    alt="Contextual inquiry 1"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771729752/IMG_5493_c7uw7x.jpg"
+                    alt="Contextual inquiry 2"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771729753/IMG_5494_pnjndd.jpg"
+                    alt="Contextual inquiry 3"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1771729752/IMG_5500_swqz3t.jpg"
+                    alt="Contextual inquiry 4"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+              <!-- Video 3: Prioritization -->
+              <div class="video-stack-item" id="media-step4">
+                <video class="w-100" autoplay loop muted playsinline>
+                  <source
+                    src="https://res.cloudinary.com/rajangra/video/upload/v1772912296/client_feedback_notes_goan7c.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- Video 4: Design -->
+              <div class="video-stack-item" id="media-step5">
+                <div class="design-grid">
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772916367/Screenshot_2026-03-07_at_3.45.40_PM_ragab2.png"
+                    alt="Design 1"
+                    class="active img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772916366/Screenshot_2026-03-07_at_3.43.01_PM_gfyyrd.png"
+                    alt="Design 2"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772916366/Screenshot_2026-03-07_at_3.43.25_PM_rlwjnm.png"
+                    alt="Design 3"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772916366/Screenshot_2026-03-07_at_3.43.45_PM_tndswf.png"
+                    alt="Design 4"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772916366/Screenshot_2026-03-07_at_3.45.15_PM_bizo1f.png"
+                    alt="Design 5"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772916366/Screenshot_2026-03-07_at_3.44.18_PM_gvznon.png"
+                    alt="Design 6"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+
+              <!-- Product Walkthrough -->
+              <div class="video-stack-item" id="media-step-walkthrough">
+                <video class="w-100" autoplay loop muted playsinline>
+                  <source
+                    src="https://res.cloudinary.com/rajangra/video/upload/v1771691859/final_preview_mockup_prototype_wkmem9.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <!-- Video 5: Testing -->
+              <div class="video-stack-item" id="media-step6">
+                <div class="testing-grid">
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772915138/Screenshot_2026-03-07_at_3.25.33_PM_vh3qwt.png"
+                    alt="Testing Intro"
+                    class="active img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772917038/Screenshot_2025-11-25_155108_pwoai0.png"
+                    alt="Testing 1"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772917037/Screenshot_2025-12-12_114106_s7xagb.png"
+                    alt="Testing 2"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772917038/Screenshot_2025-12-03_143151_knbt8t.png"
+                    alt="Testing 3"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772915062/Screenshot_2026-03-07_at_3.24.16_PM_n3omc5.png"
+                    alt="Testing 4"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+              <!-- Video 6: Build -->
+              <div class="video-stack-item" id="media-step7">
+                <div class="build-grid">
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772915372/Screenshot_2026-03-07_at_3.29.25_PM_dbhrc3.png"
+                    alt="Build 1"
+                    class="active img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772915413/Screenshot_2026-03-07_at_3.30.00_PM_spgpf7.png"
+                    alt="Build 2"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772915962/Screenshot_2026-03-07_at_3.39.07_PM_tduhin.png"
+                    alt="Build 3"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+
+              <!-- Video 7: Outcomes -->
+              <div class="video-stack-item" id="media-step8">
+                <div class="outcomes-grid">
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772917221/jonas_club_software_cmaa_hibfpp.jpg"
+                    alt="CMAA Outcome"
+                    class="active img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772918495/Screenshot_2026-03-07_at_4.19.51_PM_mbzfew.png"
+                    alt="CMAA Feedback"
+                    class="img-fluid"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/rajangra/image/upload/v1772918468/cmaa_demo_wjhhil.jpg"
+                    alt="CMAA Demo"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Sections -->
+      <section
+        id="cta"
+        data-aos="fade-up"
+        data-aos-delay="25"
+        class="row mb-5 case-study-section case-study-cta align-content-between"
+      >
+        <div class="col-lg">
+          <p>There's more to it.</p>
+          <h2 class="mb-25em">Hear the <em> full story</em>...</h2>
+          <a class="btn btn-primary" href="mailto:rajanixd@gmail.com">
+            Get in touch</a
+          >
+        </div>
+        <div data-aos="fade" data-aos-delay="500">
+          <a href="#top" class="border-0 p-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-circle-arrow-up"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="m16 12-4-4-4 4" />
+              <path d="M12 16V8" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // GSAP ScrollTrigger Logic
+      gsap.registerPlugin(ScrollTrigger, SplitText);
+
+      // Scale-up animation for images with .scale-up class
+      gsap.utils.toArray(".scale-up").forEach((img) => {
+        gsap.set(img, { scale: 0.9 });
+        gsap.to(img, {
+          scale: 1,
+
+          ease: "circ.out",
+          scrollTrigger: {
+            trigger: img,
+            start: "top 95%",
+            end: "top 70%",
+            scrub: true,
+          },
+        });
+      });
+
+      // SplitText Animation Logic for paragraphs
+      document.querySelectorAll(".split").forEach((el) => {
+        const split = new SplitText(el, { type: "words" });
+
+        // Set initial opacity of words to 0.5
+        gsap.set(split.words, { opacity: 0.5 });
+
+        gsap.to(split.words, {
+          opacity: 1,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            end: "center 50%",
+            scrub: true,
+          },
+        });
+      });
+
+      const steps = document.querySelectorAll(".step-text-block");
+      const mediaItems = document.querySelectorAll(".video-stack-item");
+      const videoStack = document.querySelector(".video-stack");
+
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 992px)", () => {
+        // Desktop: Sticky Fading Logic
+        function updateMedia(index) {
+          mediaItems.forEach((item, i) => {
+            item.classList.toggle("active", i === index);
+          });
+        }
+
+        steps.forEach((step, index) => {
+          ScrollTrigger.create({
+            trigger: step,
+            start: "top center",
+            end: "bottom center",
+            onToggle: (self) => {
+              if (self.isActive) updateMedia(index);
+            },
+          });
+        });
+
+        return () => {
+          mediaItems.forEach((item) => item.classList.remove("active"));
+        };
+      });
+
+      mm.add("(max-width: 991px)", () => {
+        // Mobile: Normal flow, interleave videos with text
+        steps.forEach((step, i) => {
+          step.appendChild(mediaItems[i]);
+        });
+
+        return () => {
+          mediaItems.forEach((item) => videoStack.appendChild(item));
+        };
+      });
+
+      // Image Cycling for Grids
+      const setupCycling = (selector) => {
+        const grids = document.querySelectorAll(selector);
+        grids.forEach((grid) => {
+          const images = grid.querySelectorAll("img");
+          if (images.length === 0) return;
+          let currentIndex = 0;
+
+          setInterval(() => {
+            images[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
+          }, 3000);
+        });
+      };
+
+      setupCycling(".research-grid");
+      setupCycling(".outcomes-grid");
+      setupCycling(".testing-grid");
+      setupCycling(".design-grid");
+      setupCycling(".build-grid");
+    </script>
+  </body>
+</html>
