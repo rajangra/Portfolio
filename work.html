@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -84,20 +84,17 @@
       }
 
       input {
+        text-align: center;
         padding: 10px;
         width: 100%;
         margin-bottom: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #333;
         border-radius: 12px;
       }
 
       .error {
         color: rgb(255, 79, 79);
         display: block;
-      }
-
-      .error-container {
-        margin-top: 10px;
       }
 
       .toggle-password {
@@ -135,16 +132,23 @@
         </div>
         <h2>Enter Password</h2>
 
-        <form id="passwordForm" onsubmit="return validatePassword(event)">
+        <form id="passwordForm" onsubmit="return validatePassword(event);">
           <div class="input-container">
-            <input type="password" id="password" placeholder="" required />
+            <input
+              autofocus
+              type="password"
+              id="password"
+              placeholder=""
+              required
+            />
           </div>
-          <div id="errorMessage" class="error-container">
-            <span id="errorMessageText" class="error mb-4" style="display: none"
-              >Incorrect password. Please try again.</span
-            >
-          </div>
-          <button class="btn btn-light" type="submit">Submit</button>
+          <button class="btn btn-primary w-100" type="submit">Submit</button>
+          <span
+            id="errorMessageText"
+            class="error mt-4"
+            style="visibility: hidden"
+            >Incorrect password. Please try again.</span
+          >
         </form>
       </div>
     </div>
@@ -178,7 +182,7 @@
           }, 1000);
         } else {
           // Show error message, keep locked animation playing
-          errorMessage.style.display = "block";
+          errorMessage.style.visibility = "visible";
         }
       }
     </script>
