@@ -517,7 +517,7 @@ h1 {
   font-family: var(--font-sans);
   letter-spacing: -0.2px;
   line-height: 1.1;
-  font-size: var(--size-xxlarge);
+  font-size: var(--size-xlarge);
 }
 
 .h1-small {
@@ -1395,7 +1395,7 @@ ul {
 }
 
 .container-hero {
-  max-width: 600px;
+  max-width: 650px;
   /* display: flex;
   align-items: center;
   justify-content: center; */
